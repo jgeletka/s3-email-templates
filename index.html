@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STORY3 Capital Partners — Email Template System</title>
+<!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<!--<![endif]-->
+<style>
+/* ── Email client resets ── */
+#outlook a{padding:0}.ReadMsgBody,.ExternalClass{width:100%}.ExternalClass *{line-height:100%}
+body{margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+table,td{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}
+img{border:0;height:auto;line-height:100%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic}
+p{display:block;margin:0}
+
+/* ── Top nav ── */
+.topnav{position:fixed;top:0;left:0;right:0;height:52px;background:#020609;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:200;box-sizing:border-box}
+.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em}
+.topnav-brand span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
+.topnav-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.05);border-radius:4px;padding:3px}
+.tnav-tab{background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:3px;cursor:pointer;transition:all 0.15s}
+.tnav-tab:hover{color:rgba(255,255,255,0.7)}
+.tnav-tab.active{background:#04101d;color:#fff;box-shadow:0 1px 4px rgba(2,8,18,0.6)}
+
+/* ── Showcase ── */
+html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif}
+.showcase-wrap{margin-left:212px;padding:52px 20px 120px;display:flex;flex-direction:column;align-items:center}
+.masthead,.t-block,.page-footer{width:100%;max-width:680px}
+.masthead{text-align:center;padding:72px 0 64px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:72px}
+.masthead .ey{font-size:9px;font-weight:700;letter-spacing:4px;color:rgba(255,255,255,0.36);text-transform:uppercase;margin:0 0 16px}
+.masthead h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:34px;color:#fff;margin:0 0 8px;line-height:1.15}
+.masthead .sub{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.28);text-transform:uppercase;margin:0}
+.t-block{margin-bottom:88px}
+.t-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.t-label em{color:rgba(255,255,255,0.3);font-style:normal;margin-right:10px}
+.frame{box-shadow:0 28px 72px rgba(2,8,18,0.72);border-radius:3px;overflow:hidden}
+.page-footer{text-align:center;padding-top:56px;border-top:1px solid rgba(255,255,255,0.06)}
+.page-footer p{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.18);text-transform:uppercase;margin:0}
+
+/* ── Sidebar ── */
+.sidenav{position:fixed;top:52px;left:0;width:212px;height:calc(100vh - 52px);background:#020609;border-right:1px solid rgba(255,255,255,0.06);padding:36px 24px;box-sizing:border-box;overflow-y:auto;z-index:100}
+.snav-label{font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin:0 0 10px}
+.sidenav a.slink{display:block;font-family:'Newsreader',Georgia,serif;font-size:13px;color:rgba(255,255,255,0.42);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:color 0.15s}
+.sidenav a.slink:hover{color:#fff}
+.sidenav a.slink.active{color:#fff}
+.sidenav a.slink.active em{color:rgba(255,255,255,0.55)}
+.slink em{display:block;font-style:normal;font-family:'Figtree',Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.25);text-transform:uppercase;margin-bottom:1px;transition:color 0.15s}
+.snav-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:20px 0}
+.toggle-group{margin-bottom:20px}
+.toggle-row{display:flex;gap:6px;margin-top:10px}
+.tbtn{flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:8px 6px;border-radius:2px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;transition:all 0.15s}
+.tbtn:hover{color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15)}
+.tbtn.active{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.25);color:#fff}
+.swatch{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.snav-footer{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.06)}
+.snav-footer p{font-size:8px;color:rgba(255,255,255,0.15);letter-spacing:1px;margin:0;line-height:18px}
+@media(max-width:900px){.showcase-wrap{margin-left:0;padding-left:16px;padding-right:16px}.sidenav{display:none}}
+
+/* ═══════════════════════════════
+   EMAIL CLASS SYSTEM
+═══════════════════════════════ */
+
+/* Backgrounds — dark default */
+.e-bg  { background-color: #04101d !important; }
+.e-bg2 { background-color: #020c16 !important; }
+
+/* Text — dark default */
+.e-t1 { color: #ffffff !important; }
+.e-t2 { color: rgba(255,255,255,0.68) !important; }
+.e-t3 { color: rgba(255,255,255,0.38) !important; }
+.e-t4 { color: rgba(255,255,255,0.22) !important; }
+
+/* Borders / dividers */
+.e-div-bg  { background-color: rgba(255,255,255,0.09) !important; }
+.e-card    { border: 1px solid rgba(255,255,255,0.1) !important; }
+.e-col-sep { border-right: 1px solid rgba(255,255,255,0.09) !important; }
+.e-border-b{ border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+
+/* Logo */
+.e-logo { filter: brightness(0) invert(1) !important; }
+
+/* Accent — red default */
+.e-a   { color: #e24e21 !important; }
+.e-ab  { background-color: #e24e21 !important; }
+a.e-ab { color: #ffffff !important; }
+.e-ao  { border-color: #e24e21 !important; }
+.e-af  { border-color: rgba(226,78,33,0.28) !important; }
+.e-ad  { background-color: #e24e21 !important; }
+.e-al  { border-left-color: rgba(226,78,33,0.55) !important; }
+.e-al2 { border-left-color: rgba(226,78,33,0.3) !important; }
+.e-al3 { border-left-color: rgba(226,78,33,0.14) !important; }
+
+/* CTA buttons */
+a.e-outline-btn { border-color: rgba(255,255,255,0.26) !important; color: #ffffff !important; }
+a.e-t04-cta     { background-color: #e24e21 !important; color: #ffffff !important; }
+
+/* ═══════════════════════════════
+   LIGHT THEME OVERRIDES
+═══════════════════════════════ */
+body.theme-light .e-bg   { background-color: #ffffff !important; }
+body.theme-light .e-bg2  { background-color: #E2E8F0 !important; }
+body.theme-light .e-t1   { color: #04101d !important; }
+body.theme-light .e-t2   { color: rgba(4,16,29,0.68) !important; }
+body.theme-light .e-t3   { color: rgba(4,16,29,0.42) !important; }
+body.theme-light .e-t4   { color: rgba(4,16,29,0.65) !important; }
+body.theme-light .e-div-bg  { background-color: rgba(4,16,29,0.08) !important; }
+body.theme-light .e-card    { border: 1px solid rgba(4,16,29,0.1) !important; }
+body.theme-light .e-col-sep { border-right: 1px solid rgba(4,16,29,0.09) !important; }
+body.theme-light .e-border-b{ border-bottom: 1px solid rgba(4,16,29,0.08) !important; }
+body.theme-light .e-logo    { filter: none !important; }
+body.theme-light .e-af   { border-color: rgba(226,78,33,0.2) !important; }
+body.theme-light a.e-outline-btn { border-color: rgba(4,16,29,0.26) !important; color: #04101d !important; }
+body.theme-light a.e-t04-cta     { background-color: #04101d !important; color: #ffffff !important; }
+
+/* Footer links & separators */
+.e-flink { color: rgba(255,255,255,0.45) !important; text-decoration: underline !important; }
+.e-sep   { color: rgba(255,255,255,0.14) !important; }
+body.theme-light .e-flink { color: #04101d !important; text-decoration: underline !important; }
+body.theme-light .e-sep   { color: rgba(4,16,29,0.4) !important; }
+body.theme-light .e-t4    { color: rgba(4,16,29,0.78) !important; }
+
+/* Accent-colored background divider (used as <div> hr) */
+.e-abg { background-color: rgba(226,78,33,0.28) !important; }
+body.accent-gold .e-abg { background-color: rgba(238,195,84,0.28) !important; }
+body.theme-light .e-abg { background-color: rgba(226,78,33,0.18) !important; }
+body.theme-light.accent-gold .e-abg { background-color: rgba(176,138,0,0.18) !important; }
+
+/* Book icon — decorative, above footer */
+.e-book { filter: brightness(0) invert(1) !important; opacity: 0.35 !important; }
+body.theme-light .e-book { filter: brightness(0) !important; opacity: 0.42 !important; }
+
+/* ═══════════════════════════════
+   GOLD ACCENT OVERRIDES
+═══════════════════════════════ */
+body.accent-gold .e-a   { color: #EEC354 !important; }
+body.accent-gold .e-ab  { background-color: #EEC354 !important; }
+body.accent-gold a.e-ab { color: #04101d !important; }
+body.accent-gold .e-ao  { border-color: #EEC354 !important; }
+body.accent-gold .e-af  { border-color: rgba(238,195,84,0.28) !important; }
+body.accent-gold .e-ad  { background-color: #EEC354 !important; }
+body.accent-gold .e-al  { border-left-color: rgba(238,195,84,0.6) !important; }
+body.accent-gold .e-al2 { border-left-color: rgba(238,195,84,0.32) !important; }
+body.accent-gold .e-al3 { border-left-color: rgba(238,195,84,0.14) !important; }
+body.accent-gold a.e-outline-btn { border-color: rgba(238,195,84,0.5) !important; color: #EEC354 !important; }
+body.accent-gold a.e-t04-cta     { background-color: #EEC354 !important; color: #04101d !important; }
+body.accent-gold.theme-light a.e-t04-cta { background-color: #04101d !important; color: #ffffff !important; }
+body.accent-gold.theme-light a.e-outline-btn { border-color: rgba(4,16,29,0.26) !important; color: #04101d !important; }
+/* Gold on white — warm but legible */
+body.theme-light.accent-gold .e-a   { color: #B08A00 !important; }
+body.theme-light.accent-gold .e-ao  { border-color: #B08A00 !important; }
+body.theme-light.accent-gold .e-af  { border-color: rgba(176,138,0,0.28) !important; }
+body.theme-light.accent-gold .e-ab  { background-color: #B08A00 !important; }
+body.theme-light.accent-gold a.e-ab { color: #ffffff !important; }
+
+/* ═══════════════════════════════
+   NAVY ACCENT — LIGHT MODE ONLY
+═══════════════════════════════ */
+#btn-navy { display: none; }
+body.theme-light #btn-navy { display: flex; }
+body.theme-light.accent-navy .e-a   { color: #031527 !important; }
+body.theme-light.accent-navy .e-ab  { background-color: #031527 !important; }
+body.theme-light.accent-navy a.e-ab { color: #ffffff !important; }
+body.theme-light.accent-navy .e-ao  { border-color: #031527 !important; }
+body.theme-light.accent-navy .e-af  { border-color: rgba(3,21,39,0.22) !important; }
+body.theme-light.accent-navy .e-ad  { background-color: #031527 !important; }
+body.theme-light.accent-navy .e-al  { border-left-color: rgba(3,21,39,0.55) !important; }
+body.theme-light.accent-navy .e-al2 { border-left-color: rgba(3,21,39,0.28) !important; }
+body.theme-light.accent-navy .e-al3 { border-left-color: rgba(3,21,39,0.14) !important; }
+body.theme-light.accent-navy .e-abg { background-color: rgba(3,21,39,0.1) !important; }
+body.theme-light.accent-navy a.e-outline-btn { border-color: rgba(3,21,39,0.3) !important; color: #031527 !important; }
+body.theme-light.accent-navy a.e-t04-cta     { background-color: #031527 !important; color: #ffffff !important; }
+
+/* ── Signature tool ── */
+#section-signatures{display:none;min-height:calc(100vh - 52px);background:#060a0f;padding:52px 0 0;box-sizing:border-box}
+.sig-wrap{max-width:900px;margin:0 auto;padding:0 28px 100px}
+.sig-masthead{text-align:center;padding:72px 0 64px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:72px}
+.sig-masthead .ey{font-size:9px;font-weight:700;letter-spacing:4px;color:rgba(255,255,255,0.36);text-transform:uppercase;margin:0 0 16px}
+.sig-masthead h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:34px;color:#fff;margin:0 0 8px;line-height:1.15}
+.sig-masthead .sub{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.28);text-transform:uppercase;margin:0}
+.sig-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:28px;margin-bottom:20px}
+.sig-card h2{font-family:'Newsreader',Georgia,serif;font-size:15px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;align-items:start}
+.sig-field{margin-bottom:14px}
+.sig-field:last-child{margin-bottom:0}
+.sig-label{display:block;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:7px;font-family:'Figtree',Helvetica,sans-serif}
+.sig-label .opt{font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.18);margin-left:4px}
+.sig-input{width:100%;border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:10px 13px;font-size:13px;color:#fff;background:rgba(255,255,255,0.05);outline:none;box-sizing:border-box;font-family:'Figtree',Helvetica,sans-serif;transition:border-color 0.15s}
+.sig-input::placeholder{color:rgba(255,255,255,0.2)}
+.sig-input:focus{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.07)}
+.sig-logo-btn{width:100%;border:1px solid rgba(255,255,255,0.08);border-radius:6px;background:rgba(255,255,255,0.03);cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:16px;margin-bottom:10px;text-align:left;transition:all 0.15s}
+.sig-logo-btn:last-child{margin-bottom:0}
+.sig-logo-btn:hover{border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.06)}
+.sig-logo-btn.sel{border-color:rgba(255,255,255,0.32);background:rgba(255,255,255,0.07)}
+.sig-logo-thumb{width:80px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sig-logo-thumb img{filter:brightness(0) invert(1);opacity:0.7}
+.sig-logo-btn.sel .sig-logo-thumb img{opacity:1}
+.sig-logo-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.32);font-family:'Figtree',Helvetica,sans-serif}
+.sig-logo-btn.sel .sig-logo-label{color:rgba(255,255,255,0.78)}
+/* Preview mock — keep white so it looks like a real email client */
+.sig-preview-chrome{background:#fff;border:1px solid rgba(255,255,255,0.12);border-radius:6px;overflow:hidden}
+.sig-preview-header{border-bottom:1px solid #e8e4df;padding:14px 18px;display:flex;align-items:center;gap:10px}
+.sig-avatar{width:34px;height:34px;border-radius:50%;background:#04101d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:Georgia,serif}
+.sig-preview-name{font-size:13px;font-weight:600;color:#04101d;line-height:1.3;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-subject{font-size:12px;color:#888;line-height:1.3;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-body{padding:18px 18px 6px;font-size:13px;color:#444;line-height:1.6;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-divider{border-top:1px solid #e8e4df;margin:0 18px}
+.sig-output-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.sig-btn{border:none;border-radius:5px;padding:9px 20px;font-size:10px;font-weight:700;cursor:pointer;letter-spacing:2px;text-transform:uppercase;font-family:'Figtree',Helvetica,sans-serif;transition:all 0.15s}
+.sig-btn-secondary{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1)}
+.sig-btn-secondary:hover{background:rgba(255,255,255,0.11);color:#fff}
+.sig-btn-primary{background:#e24e21;color:#fff;border:1px solid transparent}
+.sig-btn-primary:hover{background:#c94019}
+.sig-btn-success{background:#2a7a4b;color:#fff;border:1px solid transparent}
+.sig-textarea{width:100%;height:110px;background:rgba(4,16,29,0.55);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:12px 14px;font-size:11px;font-family:'ui-monospace',Menlo,Monaco,monospace;color:rgba(255,255,255,0.45);resize:vertical;box-sizing:border-box;line-height:1.6}
+.sig-install-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.sig-install-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.36);margin-bottom:12px;font-family:'Figtree',Helvetica,sans-serif}
+.sig-install-grid ol{margin:0;padding-left:18px;font-size:12px;color:rgba(255,255,255,0.45);line-height:2;font-family:'Figtree',Helvetica,sans-serif}
+.sig-install-grid li strong{color:rgba(255,255,255,0.7)}
+.sig-install-grid code{font-size:10px;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.55);padding:1px 5px;border-radius:3px}
+.sig-page-footer{text-align:center;padding-top:56px;border-top:1px solid rgba(255,255,255,0.06)}
+.sig-page-footer p{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.18);text-transform:uppercase;margin:0}
+/* Signature mobile */
+@media(max-width:760px){
+  .sig-wrap{padding:44px 18px 80px}
+  .sig-masthead{padding:44px 0 40px;margin-bottom:40px}
+  .sig-masthead h1{font-size:26px}
+  .sig-grid{grid-template-columns:1fr}
+  .sig-install-grid{grid-template-columns:1fr}
+  .sig-output-row{flex-direction:column;align-items:stretch}
+  .sig-output-row>div{display:flex;gap:8px}
+  .sig-btn{flex:1;text-align:center}
+}
+
+/* ── Email responsive ── */
+@media only screen and (max-width:620px){
+  .ec{width:100%!important}.mp{padding-left:24px!important;padding-right:24px!important}
+  .h-xl{font-size:30px!important;line-height:36px!important}
+  .h-lg{font-size:22px!important;line-height:28px!important}
+  .col{display:block!important;width:100%!important;padding-left:0!important;padding-right:0!important;margin-bottom:14px!important}
+  a.e-ab,a.e-outline-btn,a.e-t04-cta,a.e-btn-pair{display:block!important;width:100%!important;box-sizing:border-box!important;margin-right:0!important;margin-bottom:12px!important;text-align:center!important}
+}
+
+/* ── Mobile preview mode ── */
+body.preview-mobile .showcase-wrap { max-width: 430px; margin-left: auto; margin-right: auto; padding-left: 16px; padding-right: 16px; }
+body.preview-mobile .ec  { width:100%!important; }
+body.preview-mobile .mp  { padding-left:24px!important; padding-right:24px!important; }
+body.preview-mobile .h-xl{ font-size:30px!important; line-height:36px!important; }
+body.preview-mobile .h-lg{ font-size:22px!important; line-height:28px!important; }
+body.preview-mobile .col { display:block!important; width:100%!important; padding-left:0!important; padding-right:0!important; margin-bottom:14px!important; }
+body.preview-mobile a.e-ab,
+body.preview-mobile a.e-outline-btn,
+body.preview-mobile a.e-t04-cta,
+body.preview-mobile a.e-btn-pair { display:block!important; width:100%!important; box-sizing:border-box!important; margin-right:0!important; margin-bottom:12px!important; text-align:center!important; }
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP NAV ═══ -->
+<nav class="topnav">
+  <div class="topnav-brand">STORY3 <span>Capital Partners</span></div>
+  <div class="topnav-tabs">
+    <button id="tab-templates"  class="tnav-tab active" onclick="setSection('templates')">Email Templates</button>
+    <button id="tab-signatures" class="tnav-tab"        onclick="setSection('signatures')">Email Signatures</button>
+  </div>
+</nav>
+
+<!-- ═══ SIDEBAR ═══ -->
+<nav class="sidenav">
+  <p class="snav-label">Templates</p>
+  <a href="#t01" class="slink"><em>01</em>The Brief</a>
+  <a href="#t02" class="slink"><em>02</em>New Investment</a>
+  <a href="#t03" class="slink"><em>03</em>LP Summit Invite</a>
+  <a href="#t04" class="slink"><em>04</em>Founder Outreach</a>
+  <a href="#t05" class="slink"><em>05</em>Portfolio Spotlight</a>
+
+  <hr class="snav-divider">
+
+  <div class="toggle-group">
+    <p class="snav-label">Theme</p>
+    <div class="toggle-row">
+      <button id="btn-dark"  class="tbtn active" onclick="setTheme('dark')">Dark</button>
+      <button id="btn-light" class="tbtn"        onclick="setTheme('light')">Light</button>
+    </div>
+  </div>
+
+  <div class="toggle-group">
+    <p class="snav-label">Accent</p>
+    <div class="toggle-row">
+      <button id="btn-red"  class="tbtn active" onclick="setAccent('red')">
+        <span class="swatch" style="background:#e24e21"></span>Red
+      </button>
+      <button id="btn-gold" class="tbtn" onclick="setAccent('gold')">
+        <span class="swatch" style="background:#EEC354"></span>Gold
+      </button>
+      <button id="btn-navy" class="tbtn" onclick="setAccent('navy')">
+        <span class="swatch" style="background:#031527;border:1px solid rgba(255,255,255,0.18)"></span>Navy
+      </button>
+    </div>
+  </div>
+
+  <hr class="snav-divider">
+
+  <div class="toggle-group">
+    <p class="snav-label">Preview Width</p>
+    <div class="toggle-row">
+      <button id="btn-desktop" class="tbtn active" onclick="setPreview('desktop')">Desktop</button>
+      <button id="btn-mobile"  class="tbtn"        onclick="setPreview('mobile')">Mobile</button>
+    </div>
+  </div>
+
+  <div class="snav-footer"><p>Flodesk-Ready<br>Brand 2026</p></div>
+</nav>
+
+<!-- ═══ MAIN ═══ -->
+<div class="showcase-wrap">
+<div class="masthead">
+  <p class="ey">Email Template System</p>
+  <h1>STORY3 Capital Partners</h1>
+  <p class="sub">Flodesk-Ready &nbsp;·&nbsp; 5 Templates &nbsp;·&nbsp; Brand 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+  01 · THE BRIEF — QUARTERLY NEWSLETTER
+══════════════════════════════════════════ -->
+<div id="t01" class="t-block">
+<div class="t-label"><em>01</em>The Brief — Quarterly Newsletter</div>
+<div class="frame">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="e-bg" style="background:#04101d">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="ec" style="max-width:600px;width:100%">
+  <tr><td class="e-ab" style="background:#e24e21;height:2px;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td align="center" class="e-bg e-border-b mp" style="background:#04101d;padding:44px 48px 36px;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <a href="https://www.story3capital.com" target="_blank" style="text-decoration:none">
+      <img src="/assets/LogoFill_Black_Full.png" class="e-logo" width="220" alt="STORY3 Capital Partners" style="display:block;width:220px;height:auto;margin:0 auto;filter:brightness(0) invert(1)">
+    </a>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 18px">Q1 2026 &nbsp;·&nbsp; The Brief</p>
+    <h1 class="h-xl e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:38px;line-height:46px;color:#fff;margin:0 0 18px;letter-spacing:-0.5px">Disciplined Capital.<br>Enduring Partnerships.</h1>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:27px;color:rgba(255,255,255,0.68);margin:0;max-width:440px">A quarterly dispatch on consumer markets, portfolio performance, and the themes shaping our investment thesis.</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:36px 48px">
+    <div class="e-div-bg" style="height:1px;background:rgba(255,255,255,0.09)"></div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:0 48px">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 14px">Market Perspective</p>
+    <h2 class="h-lg e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:22px;line-height:30px;color:#fff;margin:0 0 14px">Consumer sentiment is recovering — selectively.</h2>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:27px;color:rgba(255,255,255,0.68);margin:0 0 16px">The consumer landscape continues to bifurcate. Premium and experience-led brands are outpacing commodity categories, reinforcing our conviction in quality-differentiated businesses. We are actively deploying capital into brands demonstrating pricing power and community loyalty.</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:27px;color:rgba(255,255,255,0.68);margin:0">In Q1, we completed two new investments and advanced three follow-on positions — each meeting our criteria for exceptional operator alignment and defensible market positioning.</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px">
+    <div class="e-div-bg" style="height:1px;background:rgba(255,255,255,0.09)"></div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:0 48px">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 20px">Portfolio Pulse</p>
+    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="width:244px"><![ endif]-->
+    <div class="col" style="display:inline-block;width:48%;vertical-align:top;padding-right:10px">
+      <div class="e-card" style="border:1px solid rgba(255,255,255,0.1);padding:22px;border-radius:3px">
+        <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.38);text-transform:uppercase;margin:0 0 10px">Portfolio Spotlight</p>
+        <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:17px;line-height:23px;color:#fff;margin:0 0 12px">Adanola achieves record Q1 revenue, expanding into North America.</p>
+        <a href="https://www.story3capital.com" class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#e24e21;text-decoration:none;text-transform:uppercase">Read More →</a>
+      </div>
+    </div><!--[if mso | IE]></td><td style="width:244px"><![ endif]-->
+    <div class="col" style="display:inline-block;width:48%;vertical-align:top;padding-left:4px">
+      <div class="e-card" style="border:1px solid rgba(255,255,255,0.1);padding:22px;border-radius:3px">
+        <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.38);text-transform:uppercase;margin:0 0 10px">In the News</p>
+        <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:17px;line-height:23px;color:#fff;margin:0 0 12px">Coco Republic named top global design brand for the third consecutive year.</p>
+        <a href="https://www.story3capital.com" class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:#e24e21;text-decoration:none;text-transform:uppercase">Read More →</a>
+      </div>
+    </div><!--[if mso | IE]></td></tr></table><![ endif]-->
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 52px">
+    <a href="https://www.story3capital.com" class="e-outline-btn" target="_blank" style="display:inline-block;border:1px solid rgba(255,255,255,0.26);color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:14px 36px;border-radius:2px">View Full Report</a>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:52px 48px 64px;text-align:center">
+    <img src="assets/book_icon.svg" class="e-book" width="130" height="42" alt="" style="display:inline-block;width:130px;height:42px;filter:brightness(0) invert(1);opacity:0.35">
+  </td></tr>
+  <tr><td class="e-bg2 e-af mp" style="background:#020c16;padding:28px 48px 28px;border-top:1px solid rgba(226,78,33,0.28)">
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:11px;color:rgba(255,255,255,0.22);margin:0 0 10px">STORY3 Capital Partners &nbsp;·&nbsp; Los Angeles, CA</p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:10px;margin:0">
+      <a href="{{unsubscribe_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Unsubscribe</a>
+      <span class="e-sep" style="color:rgba(255,255,255,0.14)">&nbsp;·&nbsp;</span>
+      <a href="{{preferences_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Manage Preferences</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</div></div>
+
+
+<!-- ══════════════════════════════════════════
+  02 · NEW INVESTMENT ANNOUNCEMENT
+══════════════════════════════════════════ -->
+<div id="t02" class="t-block">
+<div class="t-label"><em>02</em>New Investment Announcement</div>
+<div class="frame">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="e-bg" style="background:#04101d">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="ec" style="max-width:600px;width:100%">
+  <tr><td class="e-ab" style="background:#e24e21;height:3px;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:40px 48px 36px">
+    <a href="https://www.story3capital.com" target="_blank" style="text-decoration:none">
+      <img src="/assets/LogoFill_Black_Full.png" class="e-logo" width="200" alt="STORY3 Capital Partners" style="display:block;width:200px;height:auto;margin:0 auto;filter:brightness(0) invert(1)">
+    </a>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:0 48px 32px">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr><td class="e-ao" style="border:1px solid #e24e21;padding:8px 22px;border-radius:2px">
+        <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0">New Investment</p>
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:36px 48px 0">
+    <div class="e-div-bg" style="width:320px;height:190px;background:rgba(255,255,255,0.05);border-radius:2px;margin:0 auto;display:table;text-align:center">
+      <p class="e-t4" style="display:table-cell;vertical-align:middle;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin:0">[Company Logo]</p>
+    </div>
+    <p class="e-t2" style="text-align:center;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,0.68);margin:16px 0 0">[COMPANY NAME]</p>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:22px 48px 0">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:26px;color:rgba(255,255,255,0.68);margin:0;font-style:italic">"Redefining the [category] experience for the modern consumer."</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px">
+    <div class="e-div-bg" style="height:1px;background:rgba(255,255,255,0.09)"></div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:0 48px">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">We are proud to announce our investment in <strong class="e-t1" style="color:#fff;font-weight:400">[Company Name]</strong>, a [brief description] based in [City, State].</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0">[Company] represents everything we look for in a consumer investment: a differentiated product, a passionate and loyal customer base, and a founder-led team with the operational clarity to scale. We are proud to partner with [Founder Name] as they write their next chapter.</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 18px">Why We Invested</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td style="padding-bottom:13px"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:25px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Category leadership</strong> — dominant position in a growing [sector] market with defensible brand equity.</p></td>
+      </tr></table></td></tr>
+      <tr><td style="padding-bottom:13px"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:25px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Founder alignment</strong> — a mission-driven team with a proven track record and a clear path to profitability.</p></td>
+      </tr></table></td></tr>
+      <tr><td><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:25px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Structural tailwinds</strong> — well-positioned to capitalize on the secular shift toward [trend].</p></td>
+      </tr></table></td></tr>
+    </table>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 52px">
+    <a href="https://www.story3capital.com" class="e-ab" target="_blank" style="display:inline-block;background:#e24e21;color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:16px 40px;border-radius:2px">Read the Full Announcement</a>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:52px 48px 64px;text-align:center">
+    <img src="assets/book_icon.svg" class="e-book" width="130" height="42" alt="" style="display:inline-block;width:130px;height:42px;filter:brightness(0) invert(1);opacity:0.35">
+  </td></tr>
+  <tr><td class="e-bg2 e-af mp" style="background:#020c16;padding:28px 48px 28px;border-top:1px solid rgba(226,78,33,0.28)">
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:11px;color:rgba(255,255,255,0.22);margin:0 0 10px">STORY3 Capital Partners &nbsp;·&nbsp; Los Angeles, CA</p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:10px;margin:0">
+      <a href="{{unsubscribe_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Unsubscribe</a>
+      <span class="e-sep" style="color:rgba(255,255,255,0.14)">&nbsp;·&nbsp;</span>
+      <a href="{{preferences_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Manage Preferences</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</div></div>
+
+
+<!-- ══════════════════════════════════════════
+  03 · EVENT INVITATION — LP SUMMIT
+══════════════════════════════════════════ -->
+<div id="t03" class="t-block">
+<div class="t-label"><em>03</em>Event Invitation — LP Summit</div>
+<div class="frame">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="e-bg" style="background:#04101d">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="ec" style="max-width:600px;width:100%">
+  <tr><td class="e-ab" style="background:#e24e21;height:2px;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td align="center" class="e-bg e-border-b mp" style="background:#04101d;padding:40px 48px 36px;border-bottom:1px solid rgba(255,255,255,0.07)">
+    <a href="https://www.story3capital.com" target="_blank" style="text-decoration:none">
+      <img src="/assets/LogoFill_Black_Full.png" class="e-logo" width="200" alt="STORY3 Capital Partners" style="display:block;width:200px;height:auto;margin:0 auto;filter:brightness(0) invert(1)">
+    </a>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:52px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:4px;color:#e24e21;text-transform:uppercase;margin:0 0 16px">You Are Invited</p>
+    <h1 class="h-xl e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:40px;line-height:48px;color:#fff;margin:0;letter-spacing:-0.5px">STORY3 Annual<br>LP Summit 2026</h1>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px">
+    <div class="e-abg" style="height:1px;background:rgba(226,78,33,0.28)"></div>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:0 48px 52px">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td class="e-col-sep" style="padding:0 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.09)">
+          <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#e24e21;text-transform:uppercase;margin:0 0 7px">Date</p>
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:18px;color:#fff;margin:0;line-height:22px">June 12, 2026</p>
+        </td>
+        <td class="e-col-sep" style="padding:0 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.09)">
+          <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#e24e21;text-transform:uppercase;margin:0 0 7px">Location</p>
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:18px;color:#fff;margin:0;line-height:22px">Los Angeles, CA</p>
+        </td>
+        <td style="padding:0 28px;text-align:center">
+          <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:8px;font-weight:700;letter-spacing:2.5px;color:#e24e21;text-transform:uppercase;margin:0 0 7px">Time</p>
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:18px;color:#fff;margin:0;line-height:22px">9:00 AM – 6:00 PM</p>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:0 48px">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">Dear {{first_name}},</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">We are pleased to invite you to the STORY3 Annual LP Summit — a full day of investment updates, portfolio company presentations, and direct dialogue with our team on the themes shaping consumer markets in 2026.</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0">Attendance is exclusive to our limited partner community. Seating is limited.</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 18px">Agenda Highlights</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td class="e-al" style="border-left:2px solid rgba(226,78,33,0.55);padding:3px 0 3px 16px;margin-bottom:14px">
+        <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:15px;color:#fff;margin:0 0 3px">Portfolio Performance Review</p>
+        <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.38);margin:0;letter-spacing:0.5px">9:00 – 10:30 AM</p>
+      </td></tr>
+      <tr><td style="padding:10px 0"></td></tr>
+      <tr><td class="e-al2" style="border-left:2px solid rgba(226,78,33,0.3);padding:3px 0 3px 16px">
+        <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:15px;color:#fff;margin:0 0 3px">Founder Keynote Panel: Scaling Consumer Brands</p>
+        <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.38);margin:0;letter-spacing:0.5px">11:00 AM – 12:30 PM</p>
+      </td></tr>
+      <tr><td style="padding:10px 0"></td></tr>
+      <tr><td class="e-al3" style="border-left:2px solid rgba(226,78,33,0.14);padding:3px 0 3px 16px">
+        <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:15px;color:#fff;margin:0 0 3px">Market Outlook &amp; Strategy Session</p>
+        <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.38);margin:0;letter-spacing:0.5px">2:00 – 3:30 PM</p>
+      </td></tr>
+    </table>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 52px">
+    <a href="https://www.story3capital.com" class="e-ab" target="_blank" style="display:inline-block;background:#e24e21;color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:16px 44px;border-radius:2px">Reserve Your Seat</a>
+    <p class="e-t3" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:12px;color:rgba(255,255,255,0.38);margin:14px 0 0;font-style:italic">RSVP requested by May 30, 2026</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:52px 48px 64px;text-align:center">
+    <img src="assets/book_icon.svg" class="e-book" width="130" height="42" alt="" style="display:inline-block;width:130px;height:42px;filter:brightness(0) invert(1);opacity:0.35">
+  </td></tr>
+  <tr><td class="e-bg2 e-af mp" style="background:#020c16;padding:28px 48px 28px;border-top:1px solid rgba(226,78,33,0.28)">
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:11px;color:rgba(255,255,255,0.22);margin:0 0 10px">STORY3 Capital Partners &nbsp;·&nbsp; Los Angeles, CA</p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:10px;margin:0">
+      <a href="{{unsubscribe_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Unsubscribe</a>
+      <span class="e-sep" style="color:rgba(255,255,255,0.14)">&nbsp;·&nbsp;</span>
+      <a href="{{preferences_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Manage Preferences</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</div></div>
+
+
+<!-- ══════════════════════════════════════════
+  04 · FOUNDER OUTREACH
+══════════════════════════════════════════ -->
+<div id="t04" class="t-block">
+<div class="t-label"><em>04</em>Founder Outreach — Introduction</div>
+<div class="frame">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="e-bg" style="background:#04101d">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="ec" style="max-width:600px;width:100%">
+  <tr><td class="e-ab" style="background:#e24e21;height:2px;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td align="center" class="e-bg e-border-b mp" style="background:#04101d;padding:40px 48px 36px;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <a href="https://www.story3capital.com" target="_blank" style="text-decoration:none">
+      <img src="/assets/LogoFill_Black_Full.png" class="e-logo" width="200" alt="STORY3 Capital Partners" style="display:block;width:200px;height:auto;margin:0 auto;filter:brightness(0) invert(1)">
+    </a>
+  </td></tr>
+  <!-- Dark band — stays dark in both themes -->
+  <tr><td style="background:#04101d;padding:48px 48px 44px">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 16px">A Note From Our Team</p>
+    <h1 class="h-xl" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:30px;line-height:38px;color:#fff;margin:0">We invest in founders<br>building what's next<br>in consumer.</h1>
+  </td></tr>
+  <!-- Body — flips on theme toggle -->
+  <tr><td class="e-bg mp" style="background:#04101d;padding:44px 48px 0">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">Hi {{first_name}},</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">We've been following the work you're doing at [Company] — the traction you've built, and the brand you're creating, is exactly the kind of story we look for.</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">STORY3 Capital Partners is a consumer specialist investment firm based in Los Angeles. We back founder-led businesses across commerce, brands, and platforms — providing flexible capital and operational partnership built for the long term.</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0">We would love to connect — no agenda other than to learn more about where you're taking [Company].</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;opacity:0.7;margin:0 0 18px">What We Bring</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td style="padding-bottom:13px"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Flexible capital</strong> — structured to fit your business, not a template.</p></td>
+      </tr></table></td></tr>
+      <tr><td style="padding-bottom:13px"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Sector expertise</strong> — decades of consumer investing and operating experience.</p></td>
+      </tr></table></td></tr>
+      <tr><td><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+        <td style="padding-right:12px;vertical-align:top;padding-top:5px"><div class="e-ad" style="width:5px;height:5px;background:#e24e21;border-radius:50%"></div></td>
+        <td><p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:24px;color:rgba(255,255,255,0.68);margin:0"><strong class="e-t1" style="color:#fff;font-weight:400">Founder alignment</strong> — we move with precision and work alongside you for the long haul.</p></td>
+      </tr></table></td></tr>
+    </table>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px 0">
+    <div class="e-div-bg" style="height:1px;background:rgba(255,255,255,0.09)"></div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:28px 48px 0">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:25px;color:rgba(255,255,255,0.68);margin:0 0 18px">Looking forward to connecting,</p>
+    <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:15px;color:#fff;margin:0 0 3px">[Partner Name]</p>
+    <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:10px;color:rgba(255,255,255,0.38);margin:0;letter-spacing:0.5px">Partner, STORY3 Capital Partners</p>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:36px 48px 52px">
+    <a href="https://www.story3capital.com" class="e-t04-cta" target="_blank" style="display:inline-block;background:#e24e21;color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:16px 40px;border-radius:2px">Schedule a Call</a>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:52px 48px 64px;text-align:center">
+    <img src="assets/book_icon.svg" class="e-book" width="130" height="42" alt="" style="display:inline-block;width:130px;height:42px;filter:brightness(0) invert(1);opacity:0.35">
+  </td></tr>
+  <tr><td class="e-bg2 e-af mp" style="background:#020c16;padding:28px 48px 28px;border-top:1px solid rgba(226,78,33,0.28)">
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:11px;color:rgba(255,255,255,0.22);margin:0 0 10px">STORY3 Capital Partners &nbsp;·&nbsp; Los Angeles, CA &nbsp;·&nbsp; story3capital.com</p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:10px;margin:0">
+      <a href="{{unsubscribe_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Unsubscribe</a>
+      <span class="e-sep" style="color:rgba(255,255,255,0.14)">&nbsp;·&nbsp;</span>
+      <a href="{{preferences_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Manage Preferences</a>
+    </p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</div></div>
+
+
+<!-- ══════════════════════════════════════════
+  05 · PORTFOLIO SPOTLIGHT
+══════════════════════════════════════════ -->
+<div id="t05" class="t-block">
+<div class="t-label"><em>05</em>Portfolio Spotlight</div>
+<div class="frame">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="e-bg" style="background:#04101d">
+<tr><td align="center">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="ec" style="max-width:600px;width:100%">
+  <tr><td class="e-ab" style="background:#e24e21;height:2px;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td align="center" class="e-bg e-border-b mp" style="background:#04101d;padding:40px 48px 36px;border-bottom:1px solid rgba(255,255,255,0.07)">
+    <a href="https://www.story3capital.com" target="_blank" style="text-decoration:none">
+      <img src="/assets/LogoFill_Black_Full.png" class="e-logo" width="200" alt="STORY3 Capital Partners" style="display:block;width:200px;height:auto;margin:0 auto;filter:brightness(0) invert(1)">
+    </a>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 14px">From Our Portfolio</p>
+    <h1 class="h-xl e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:42px;line-height:50px;color:#fff;margin:0;letter-spacing:-0.5px">[Company Name]</h1>
+    <p class="e-t3" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;color:rgba(255,255,255,0.38);margin:12px 0 0;font-style:italic">[Category] &nbsp;·&nbsp; [City, Country] &nbsp;·&nbsp; Est. [Year]</p>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:28px 48px">
+    <div class="e-card" style="border:1px solid rgba(255,255,255,0.07);border-radius:3px;height:220px;display:flex;align-items:center;justify-content:center;text-align:center">
+      <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin:0">[ Portfolio Company Image ]</p>
+    </div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:0 48px">
+    <div class="e-div-bg" style="height:1px;background:rgba(255,255,255,0.09)"></div>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:28px 48px 0">
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0 0 18px">[Company Name] is redefining [category] for a new generation of consumers. Founded in [year] by [Founder Name], the company has grown to establish itself as one of the most exciting brands in its space.</p>
+    <p class="e-t2" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:16px;line-height:28px;color:rgba(255,255,255,0.68);margin:0">STORY3 partnered with [Company] in [year] to support their expansion into [market/channel]. Since then, the brand has [key milestone].</p>
+  </td></tr>
+  <!-- Quote block -->
+  <tr><td class="e-bg mp" style="background:#04101d;padding:28px 48px 0">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr>
+        <td class="e-al" style="border-left:2px solid rgba(226,78,33,0.55);padding:4px 0 4px 22px">
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:19px;line-height:30px;color:#fff;margin:0 0 12px;font-style:italic">"[A compelling quote from the founder about the partnership or company vision.]"</p>
+          <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.38);text-transform:uppercase;margin:0">[Founder Name] &nbsp;·&nbsp; Founder &amp; CEO, [Company]</p>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <!-- Metrics -->
+  <tr><td class="e-bg mp" style="background:#04101d;padding:32px 48px 0">
+    <p class="e-a" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:#e24e21;text-transform:uppercase;margin:0 0 20px">By the Numbers</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr>
+        <td width="33%" class="e-col-sep" style="text-align:center;border-right:1px solid rgba(255,255,255,0.09);padding-bottom:4px">
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:30px;color:#fff;margin:0">+[X]%</p>
+          <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;color:rgba(255,255,255,0.38);margin:5px 0 0;letter-spacing:1px;text-transform:uppercase">YoY Revenue</p>
+        </td>
+        <td width="33%" class="e-col-sep" style="text-align:center;border-right:1px solid rgba(255,255,255,0.09);padding-bottom:4px">
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:30px;color:#fff;margin:0">[X]M</p>
+          <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;color:rgba(255,255,255,0.38);margin:5px 0 0;letter-spacing:1px;text-transform:uppercase">Active Customers</p>
+        </td>
+        <td width="33%" style="text-align:center;padding-bottom:4px">
+          <p class="e-t1" style="font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:30px;color:#fff;margin:0">[X]</p>
+          <p class="e-t3" style="font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;color:rgba(255,255,255,0.38);margin:5px 0 0;letter-spacing:1px;text-transform:uppercase">Countries</p>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td align="center" class="e-bg mp" style="background:#04101d;padding:44px 48px 52px">
+    <a href="https://www.story3capital.com" class="e-outline-btn e-btn-pair" target="_blank" style="display:inline-block;border:1px solid rgba(255,255,255,0.26);color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:14px 30px;border-radius:2px;margin-right:10px">View Portfolio</a>
+    <a href="https://www.story3capital.com" class="e-ab e-btn-pair" target="_blank" style="display:inline-block;background:#e24e21;color:#fff;font-family:'Figtree',Helvetica,Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:14px 30px;border-radius:2px">[Company] Website →</a>
+  </td></tr>
+  <tr><td class="e-bg mp" style="background:#04101d;padding:52px 48px 64px;text-align:center">
+    <img src="assets/book_icon.svg" class="e-book" width="130" height="42" alt="" style="display:inline-block;width:130px;height:42px;filter:brightness(0) invert(1);opacity:0.35">
+  </td></tr>
+  <tr><td class="e-bg2 e-af mp" style="background:#020c16;padding:28px 48px 28px;border-top:1px solid rgba(226,78,33,0.28)">
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:11px;color:rgba(255,255,255,0.22);margin:0 0 10px">STORY3 Capital Partners &nbsp;·&nbsp; Los Angeles, CA</p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:10px;margin:0 0 12px">
+      <a href="{{unsubscribe_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Unsubscribe</a>
+      <span class="e-sep" style="color:rgba(255,255,255,0.14)">&nbsp;·&nbsp;</span>
+      <a href="{{preferences_url}}" class="e-flink" style="color:rgba(255,255,255,0.45);text-decoration:underline">Manage Preferences</a>
+    </p>
+    <p class="e-t4" style="text-align:center;font-family:'Newsreader',Georgia,serif;font-size:9px;color:rgba(255,255,255,0.16);margin:0;line-height:15px">Securities offered through STORY3 Advisors, LLC. Member FINRA | SIPC.<br>©2026 STORY3 Advisors LLC. All rights reserved.</p>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</div></div>
+
+<div class="page-footer"><p>STORY3 Capital Partners &nbsp;·&nbsp; Email System 2026 &nbsp;·&nbsp; Built for Flodesk</p></div>
+</div><!-- /showcase-wrap -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+  SIGNATURE GENERATOR SECTION
+════════════════════════════════════════════════════════════════ -->
+<div id="section-signatures">
+<div class="sig-wrap">
+
+  <div class="sig-masthead">
+    <p class="ey">STORY3 Capital Partners</p>
+    <h1>Email Signature Generator</h1>
+    <p class="sub">Fill in your details · choose a logo · copy HTML into Outlook or Gmail</p>
+  </div>
+
+  <!-- Live preview -->
+  <div class="sig-card" style="margin-bottom:24px">
+    <h2>Preview</h2>
+    <div class="sig-preview-chrome">
+      <div class="sig-preview-header">
+        <div class="sig-avatar" id="sig-avatar">A</div>
+        <div>
+          <div class="sig-preview-name" id="sig-preview-from">First &amp; Last Name</div>
+          <div class="sig-preview-subject">Re: Q3 Portfolio Update</div>
+        </div>
+      </div>
+      <div class="sig-preview-body">
+        <p style="margin:0 0 12px">Hi team,<br>Please see the attached slides for our Q3 review. Looking forward to connecting with everyone next week.</p>
+        <p style="margin:0 0 16px">Best,</p>
+      </div>
+      <div class="sig-preview-divider"></div>
+      <div id="sig-preview-sig" style="padding:16px 18px 18px;display:inline-block"></div>
+    </div>
+  </div>
+
+  <!-- Form + Logo picker -->
+  <div class="sig-grid">
+    <!-- Form -->
+    <div class="sig-card">
+      <h2>Your Details</h2>
+      <div class="sig-field">
+        <label class="sig-label">Full Name</label>
+        <input class="sig-input" id="sig-name" type="text" placeholder="First &amp; Last Name" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Title</label>
+        <input class="sig-input" id="sig-title" type="text" placeholder="Your Title" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Phone <span class="opt">optional</span></label>
+        <input class="sig-input" id="sig-phone" type="tel" placeholder="(310) 555-0100" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Email</label>
+        <input class="sig-input" id="sig-email" type="email" placeholder="you@story3capital.com" oninput="updateSig()">
+      </div>
+    </div>
+    <!-- Logo picker -->
+    <div class="sig-card">
+      <h2>Logo Style</h2>
+      <button class="sig-logo-btn sel" data-logo="1" onclick="selectLogo(1)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-wordmark.png" alt="Full Wordmark" style="display:block;height:24px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">Full Wordmark</span>
+      </button>
+      <button class="sig-logo-btn" data-logo="2" onclick="selectLogo(2)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-monogram.png" alt="S3 Mark" style="display:block;height:38px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">S3 Mark</span>
+      </button>
+      <button class="sig-logo-btn" data-logo="3" onclick="selectLogo(3)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-engraved.png" alt="Engraved" style="display:block;height:24px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">Engraved</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HTML Output -->
+  <div class="sig-card" style="margin-bottom:24px">
+    <div class="sig-output-row">
+      <h2 style="margin:0">Signature HTML</h2>
+      <div style="display:flex;gap:10px">
+        <button class="sig-btn sig-btn-secondary" onclick="downloadPng()">↓ Download PNG</button>
+        <button class="sig-btn sig-btn-primary" id="sig-copy-btn" onclick="copyHtml()">Copy HTML</button>
+      </div>
+    </div>
+    <textarea class="sig-textarea" id="sig-output" readonly></textarea>
+  </div>
+
+  <!-- Installation instructions -->
+  <div class="sig-card">
+    <h2>Installation Instructions</h2>
+    <div class="sig-install-grid">
+      <div>
+        <div class="sig-install-label">Outlook · Mac</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>Outlook → Preferences → Signatures</li>
+          <li>Click <strong>+</strong> to create new</li>
+          <li>Edit → <strong>Paste as HTML</strong></li>
+          <li>Name it and set as default</li>
+        </ol>
+      </div>
+      <div>
+        <div class="sig-install-label">Outlook · Windows</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>File → Options → Mail → Signatures → New</li>
+          <li>Paste HTML into Notepad, save as <em>.htm</em></li>
+          <li>Open .htm in Chrome, select all, copy</li>
+          <li>Paste into the signature editor</li>
+        </ol>
+      </div>
+      <div>
+        <div class="sig-install-label">Gmail</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>Settings → See all settings → Signature</li>
+          <li>Create new signature</li>
+          <li>In the editor, click the source / HTML icon and paste</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="sig-page-footer"><p>STORY3 Capital Partners &nbsp;·&nbsp; Email System</p></div>
+
+</div><!-- /sig-wrap -->
+</div><!-- /section-signatures -->
+
+<script>
+function setTheme(t) {
+  document.body.classList.toggle('theme-light', t === 'light');
+  document.getElementById('btn-dark').classList.toggle('active', t === 'dark');
+  document.getElementById('btn-light').classList.toggle('active', t === 'light');
+  if (t === 'dark' && document.body.classList.contains('accent-navy')) {
+    setAccent('red');
+  }
+}
+function setAccent(a) {
+  document.body.classList.toggle('accent-gold', a === 'gold');
+  document.body.classList.toggle('accent-navy', a === 'navy');
+  document.getElementById('btn-red').classList.toggle('active', a === 'red');
+  document.getElementById('btn-gold').classList.toggle('active', a === 'gold');
+  document.getElementById('btn-navy').classList.toggle('active', a === 'navy');
+}
+function setPreview(p) {
+  document.body.classList.toggle('preview-mobile', p === 'mobile');
+  document.getElementById('btn-desktop').classList.toggle('active', p === 'desktop');
+  document.getElementById('btn-mobile').classList.toggle('active', p === 'mobile');
+}
+
+/* ── Section switcher ── */
+function setSection(s) {
+  var isTemplates = s === 'templates';
+  document.getElementById('section-signatures').style.display = isTemplates ? 'none' : 'block';
+  document.querySelector('.showcase-wrap').style.display    = isTemplates ? '' : 'none';
+  document.querySelector('.sidenav').style.display          = isTemplates ? '' : 'none';
+  document.getElementById('tab-templates').classList.toggle('active', isTemplates);
+  document.getElementById('tab-signatures').classList.toggle('active', !isTemplates);
+}
+
+/* ── Nav scroll spy ── */
+var slinks = document.querySelectorAll('.slink');
+var sections = ['t01','t02','t03','t04','t05'];
+function setActiveLink(id) {
+  slinks.forEach(function(a) {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+  });
+}
+window.addEventListener('scroll', function() {
+  var scrollY = window.scrollY + 120;
+  var current = sections[0];
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) current = id;
+  });
+  setActiveLink(current);
+}, { passive: true });
+slinks.forEach(function(a) {
+  a.addEventListener('click', function() {
+    setActiveLink(this.getAttribute('href').slice(1));
+  });
+});
+// Set initial active on load
+setActiveLink('t01');
+
+/* ── Signature tool ── */
+var sigLogo = 1;
+var LOGOS = {
+  1: { file: 'sig-wordmark.png',  width: 279, previewWidth: 186 },
+  2: { file: 'sig-monogram.png',  width: 98,  previewWidth: 72  },
+  3: { file: 'sig-engraved.png',  width: 284, previewWidth: 186 }
+};
+var BASE = 'https://story3capital.com/images/signatures/';
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function buildSigHtml(name, title, phone, email, logo) {
+  var l = LOGOS[logo];
+  var imgUrl = BASE + l.file;
+  var phoneRow = phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4;">' + esc(phone) + '</td></tr>' : '';
+  return '<table cellpadding="0" cellspacing="0" border="0" style="font-family:Georgia,\'Times New Roman\',serif;">\n  <tr>\n    <td style="padding-right:22px;vertical-align:middle;">\n      <img src="' + imgUrl + '" width="' + l.width + '" alt="STORY3 Capital Partners" style="display:block;border:0;" />\n    </td>\n    <td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle;">\n      <table cellpadding="0" cellspacing="0" border="0">\n        <tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:24px;color:#04101d;padding-bottom:2px;line-height:28px;">' + esc(name) + '</td></tr>\n        <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;">' + esc(title) + '</td></tr>\n        ' + phoneRow + '\n        <tr><td><a href="mailto:' + esc(email) + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4;">' + esc(email) + '</a></td></tr>\n      </table>\n    </td>\n  </tr>\n</table>';
+}
+
+function updateSig() {
+  var name  = document.getElementById('sig-name').value;
+  var title = document.getElementById('sig-title').value;
+  var phone = document.getElementById('sig-phone').value;
+  var email = document.getElementById('sig-email').value;
+  var l = LOGOS[sigLogo];
+
+  // Update avatar
+  document.getElementById('sig-avatar').textContent = (name || 'A').charAt(0).toUpperCase();
+  document.getElementById('sig-preview-from').textContent = name || 'First & Last Name';
+
+  // Update live preview signature
+  document.getElementById('sig-preview-sig').innerHTML =
+    '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse">' +
+    '<tr>' +
+    '<td style="padding-right:22px;vertical-align:middle">' +
+    '<img src="assets/signatures/' + l.file + '" alt="STORY3" style="display:block;border:0;width:' + l.previewWidth + 'px;height:auto">' +
+    '</td>' +
+    '<td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle">' +
+    '<table cellpadding="0" cellspacing="0">' +
+    '<tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:22px;color:#04101d;padding-bottom:2px;line-height:26px;white-space:nowrap">' + (name || 'First &amp; Last Name') + '</td></tr>' +
+    '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;white-space:nowrap">' + (title || 'Your Title') + '</td></tr>' +
+    (phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4">' + name_esc(phone) + '</td></tr>' : '') +
+    '<tr><td><a href="mailto:' + (email||'') + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4">' + (email || 'you@story3capital.com') + '</a></td></tr>' +
+    '</table></td></tr></table>';
+
+  // Update HTML output
+  document.getElementById('sig-output').value = buildSigHtml(
+    name || 'First & Last Name',
+    title || 'Your Title',
+    phone,
+    email || 'you@story3capital.com',
+    sigLogo
+  );
+}
+
+function name_esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function selectLogo(n) {
+  sigLogo = n;
+  document.querySelectorAll('.sig-logo-btn').forEach(function(b) {
+    b.classList.toggle('sel', parseInt(b.dataset.logo) === n);
+  });
+  updateSig();
+}
+
+function copyHtml() {
+  var ta = document.getElementById('sig-output');
+  navigator.clipboard.writeText(ta.value).catch(function() { ta.select(); document.execCommand('copy'); });
+  var btn = document.getElementById('sig-copy-btn');
+  btn.textContent = '✓ Copied!';
+  btn.classList.add('sig-btn-success');
+  btn.classList.remove('sig-btn-primary');
+  setTimeout(function() {
+    btn.textContent = 'Copy HTML';
+    btn.classList.remove('sig-btn-success');
+    btn.classList.add('sig-btn-primary');
+  }, 2200);
+}
+
+function downloadPng() {
+  var el = document.getElementById('sig-preview-sig');
+  if (!window.html2canvas) {
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload = function() { runPng(el); };
+    document.head.appendChild(s);
+  } else { runPng(el); }
+}
+
+function runPng(el) {
+  html2canvas(el, { scale:2, backgroundColor:'#ffffff', useCORS:true, logging:false }).then(function(canvas) {
+    var a = document.createElement('a');
+    var name = document.getElementById('sig-name').value || 'signature';
+    a.download = 'story3-sig-' + name.replace(/\s+/g,'-').toLowerCase() + '.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  });
+}
+
+// Init signature preview
+updateSig();
+</script>
+</body>
+</html>
