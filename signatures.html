@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STORY3 Capital Partners — Email Signatures</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & base ── */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;color:#fff;scroll-behavior:smooth}
+
+/* ── Top nav ── */
+.topnav{position:fixed;top:0;left:0;right:0;height:52px;background:#020609;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:200;box-sizing:border-box}
+.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em;text-decoration:none}
+.topnav-brand span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
+.topnav-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.05);border-radius:4px;padding:3px}
+.tnav-tab{background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:3px;cursor:pointer;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center}
+.tnav-tab:hover{color:rgba(255,255,255,0.7)}
+.tnav-tab.active{background:#04101d;color:#fff;box-shadow:0 1px 4px rgba(2,8,18,0.6)}
+
+/* ── Content wrapper ── */
+.sig-page-wrap{padding-top:52px}
+
+/* ── Signature tool ── */
+.sig-wrap{max-width:900px;margin:0 auto;padding:0 28px 100px}
+.sig-masthead{text-align:center;padding:72px 0 64px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:72px}
+.sig-masthead .ey{font-size:9px;font-weight:700;letter-spacing:4px;color:rgba(255,255,255,0.36);text-transform:uppercase;margin:0 0 16px}
+.sig-masthead h1{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:34px;color:#fff;margin:0 0 8px;line-height:1.15}
+.sig-masthead .sub{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.28);text-transform:uppercase;margin:0}
+.sig-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:28px;margin-bottom:20px}
+.sig-card h2{font-family:'Newsreader',Georgia,serif;font-size:15px;font-weight:400;color:rgba(255,255,255,0.7);margin:0 0 20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;align-items:start}
+.sig-field{margin-bottom:14px}
+.sig-field:last-child{margin-bottom:0}
+.sig-label{display:block;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:7px;font-family:'Figtree',Helvetica,sans-serif}
+.sig-label .opt{font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.18);margin-left:4px}
+.sig-input{width:100%;border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:10px 13px;font-size:13px;color:#fff;background:rgba(255,255,255,0.05);outline:none;box-sizing:border-box;font-family:'Figtree',Helvetica,sans-serif;transition:border-color 0.15s}
+.sig-input::placeholder{color:rgba(255,255,255,0.2)}
+.sig-input:focus{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.07)}
+.sig-logo-btn{width:100%;border:1px solid rgba(255,255,255,0.08);border-radius:6px;background:rgba(255,255,255,0.03);cursor:pointer;padding:14px 18px;display:flex;align-items:center;gap:16px;margin-bottom:10px;text-align:left;transition:all 0.15s}
+.sig-logo-btn:last-child{margin-bottom:0}
+.sig-logo-btn:hover{border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.06)}
+.sig-logo-btn.sel{border-color:rgba(255,255,255,0.32);background:rgba(255,255,255,0.07)}
+.sig-logo-thumb{width:80px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sig-logo-thumb img{filter:brightness(0) invert(1);opacity:0.7}
+.sig-logo-btn.sel .sig-logo-thumb img{opacity:1}
+.sig-logo-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.32);font-family:'Figtree',Helvetica,sans-serif}
+.sig-logo-btn.sel .sig-logo-label{color:rgba(255,255,255,0.78)}
+/* Preview mock — keep white so it looks like a real email client */
+.sig-preview-chrome{background:#fff;border:1px solid rgba(255,255,255,0.12);border-radius:6px;overflow:hidden}
+.sig-preview-header{border-bottom:1px solid #e8e4df;padding:14px 18px;display:flex;align-items:center;gap:10px}
+.sig-avatar{width:34px;height:34px;border-radius:50%;background:#04101d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;font-family:Georgia,serif}
+.sig-preview-name{font-size:13px;font-weight:600;color:#04101d;line-height:1.3;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-subject{font-size:12px;color:#888;line-height:1.3;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-body{padding:18px 18px 6px;font-size:13px;color:#444;line-height:1.6;font-family:'Figtree',Helvetica,sans-serif}
+.sig-preview-divider{border-top:1px solid #e8e4df;margin:0 18px}
+.sig-output-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.sig-btn{border:none;border-radius:5px;padding:9px 20px;font-size:10px;font-weight:700;cursor:pointer;letter-spacing:2px;text-transform:uppercase;font-family:'Figtree',Helvetica,sans-serif;transition:all 0.15s}
+.sig-btn-secondary{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1)}
+.sig-btn-secondary:hover{background:rgba(255,255,255,0.11);color:#fff}
+.sig-btn-primary{background:#3895D0;color:#fff;border:1px solid transparent}
+.sig-btn-primary:hover{background:#2a7ab8}
+.sig-btn-success{background:#2a7a4b;color:#fff;border:1px solid transparent}
+.sig-textarea{width:100%;height:110px;background:rgba(4,16,29,0.55);border:1px solid rgba(255,255,255,0.08);border-radius:5px;padding:12px 14px;font-size:11px;font-family:'ui-monospace',Menlo,Monaco,monospace;color:rgba(255,255,255,0.45);resize:vertical;box-sizing:border-box;line-height:1.6}
+.sig-install-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.sig-install-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.36);margin-bottom:12px;font-family:'Figtree',Helvetica,sans-serif}
+.sig-install-grid ol{margin:0;padding-left:18px;font-size:12px;color:rgba(255,255,255,0.45);line-height:2;font-family:'Figtree',Helvetica,sans-serif}
+.sig-install-grid li strong{color:rgba(255,255,255,0.7)}
+.sig-install-grid code{font-size:10px;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.55);padding:1px 5px;border-radius:3px}
+.sig-page-footer{text-align:center;padding-top:56px;border-top:1px solid rgba(255,255,255,0.06)}
+.sig-page-footer p{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.18);text-transform:uppercase;margin:0}
+/* Signature mobile */
+@media(max-width:760px){
+  .sig-wrap{padding:44px 18px 80px}
+  .sig-masthead{padding:44px 0 40px;margin-bottom:40px}
+  .sig-masthead h1{font-size:26px}
+  .sig-grid{grid-template-columns:1fr}
+  .sig-install-grid{grid-template-columns:1fr}
+  .sig-output-row{flex-direction:column;align-items:stretch}
+  .sig-output-row>div{display:flex;gap:8px}
+  .sig-btn{flex:1;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP NAV ═══ -->
+<nav class="topnav">
+  <a class="topnav-brand" href="index.html">STORY3 <span>Capital Partners</span></a>
+  <div class="topnav-tabs">
+    <a href="index.html"       class="tnav-tab">Email Templates</a>
+    <a href="signatures.html"  class="tnav-tab active">Email Signatures</a>
+    <a href="assets.html"      class="tnav-tab">Assets</a>
+    <a href="brand-guide.html" class="tnav-tab">Brand Guide</a>
+  </div>
+</nav>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="sig-page-wrap">
+
+<div class="sig-wrap">
+
+  <div class="sig-masthead">
+    <p class="ey">STORY3 Capital Partners</p>
+    <h1>Email Signature Generator</h1>
+    <p class="sub">Fill in your details · choose a logo · copy HTML into Outlook or Gmail</p>
+  </div>
+
+  <!-- Live preview -->
+  <div class="sig-card" style="margin-bottom:24px">
+    <h2>Preview</h2>
+    <div class="sig-preview-chrome">
+      <div class="sig-preview-header">
+        <div class="sig-avatar" id="sig-avatar">A</div>
+        <div>
+          <div class="sig-preview-name" id="sig-preview-from">First &amp; Last Name</div>
+          <div class="sig-preview-subject">Re: Q3 Portfolio Update</div>
+        </div>
+      </div>
+      <div class="sig-preview-body">
+        <p style="margin:0 0 12px">Hi team,<br>Please see the attached slides for our Q3 review. Looking forward to connecting with everyone next week.</p>
+        <p style="margin:0 0 16px">Best,</p>
+      </div>
+      <div class="sig-preview-divider"></div>
+      <div id="sig-preview-sig" style="padding:16px 18px 18px;display:inline-block"></div>
+    </div>
+  </div>
+
+  <!-- Form + Logo picker -->
+  <div class="sig-grid">
+    <div class="sig-card">
+      <h2>Your Details</h2>
+      <div class="sig-field">
+        <label class="sig-label">Full Name</label>
+        <input class="sig-input" id="sig-name" type="text" placeholder="First &amp; Last Name" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Title</label>
+        <input class="sig-input" id="sig-title" type="text" placeholder="Your Title" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Phone <span class="opt">optional</span></label>
+        <input class="sig-input" id="sig-phone" type="tel" placeholder="(310) 555-0100" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Email</label>
+        <input class="sig-input" id="sig-email" type="email" placeholder="you@story3capital.com" oninput="updateSig()">
+      </div>
+    </div>
+    <div class="sig-card">
+      <h2>Logo Style</h2>
+      <button class="sig-logo-btn sel" data-logo="1" onclick="selectLogo(1)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-wordmark.png" alt="Full Wordmark" style="display:block;height:24px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">Full Wordmark</span>
+      </button>
+      <button class="sig-logo-btn" data-logo="2" onclick="selectLogo(2)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-monogram.png" alt="S3 Mark" style="display:block;height:38px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">S3 Mark</span>
+      </button>
+      <button class="sig-logo-btn" data-logo="3" onclick="selectLogo(3)">
+        <div class="sig-logo-thumb"><img src="assets/signatures/sig-engraved.png" alt="Engraved" style="display:block;height:24px;width:auto;max-width:80px"></div>
+        <span class="sig-logo-label">Engraved</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- HTML Output -->
+  <div class="sig-card" style="margin-bottom:24px">
+    <div class="sig-output-row">
+      <h2 style="margin:0">Signature HTML</h2>
+      <div style="display:flex;gap:10px">
+        <button class="sig-btn sig-btn-secondary" onclick="downloadPng()">↓ Download PNG</button>
+        <button class="sig-btn sig-btn-primary" id="sig-copy-btn" onclick="copyHtml()">Copy HTML</button>
+      </div>
+    </div>
+    <textarea class="sig-textarea" id="sig-output" readonly></textarea>
+  </div>
+
+  <!-- Installation instructions -->
+  <div class="sig-card">
+    <h2>Installation Instructions</h2>
+    <div class="sig-install-grid">
+      <div>
+        <div class="sig-install-label">Outlook · Mac</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>Outlook → Preferences → Signatures</li>
+          <li>Click <strong>+</strong> to create new</li>
+          <li>Edit → <strong>Paste as HTML</strong></li>
+          <li>Name it and set as default</li>
+        </ol>
+      </div>
+      <div>
+        <div class="sig-install-label">Outlook · Windows</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>File → Options → Mail → Signatures → New</li>
+          <li>Paste HTML into Notepad, save as <em>.htm</em></li>
+          <li>Open .htm in Chrome, select all, copy</li>
+          <li>Paste into the signature editor</li>
+        </ol>
+      </div>
+      <div>
+        <div class="sig-install-label">Gmail</div>
+        <ol>
+          <li>Copy the HTML above</li>
+          <li>Settings → See all settings → Signature</li>
+          <li>Create new signature</li>
+          <li>In the editor, click the source / HTML icon and paste</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="sig-page-footer"><p>STORY3 Capital Partners &nbsp;·&nbsp; Email System</p></div>
+
+</div>
+
+</div><!-- /.sig-page-wrap -->
+
+<script>
+var sigLogo = 1;
+var LOGOS = {
+  1: { file: 'sig-wordmark.png',  width: 279, previewWidth: 186 },
+  2: { file: 'sig-monogram.png',  width: 98,  previewWidth: 72  },
+  3: { file: 'sig-engraved.png',  width: 284, previewWidth: 186 }
+};
+var BASE = 'https://story3capital.com/images/signatures/';
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function buildSigHtml(name, title, phone, email, logo) {
+  var l = LOGOS[logo];
+  var imgUrl = BASE + l.file;
+  var phoneRow = phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4;">' + esc(phone) + '</td></tr>' : '';
+  return '<table cellpadding="0" cellspacing="0" border="0" style="font-family:Georgia,\'Times New Roman\',serif;">\n  <tr>\n    <td style="padding-right:22px;vertical-align:middle;">\n      <img src="' + imgUrl + '" width="' + l.width + '" alt="STORY3 Capital Partners" style="display:block;border:0;" />\n    </td>\n    <td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle;">\n      <table cellpadding="0" cellspacing="0" border="0">\n        <tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:24px;color:#04101d;padding-bottom:2px;line-height:28px;">' + esc(name) + '</td></tr>\n        <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;">' + esc(title) + '</td></tr>\n        ' + phoneRow + '\n        <tr><td><a href="mailto:' + esc(email) + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4;">' + esc(email) + '</a></td></tr>\n      </table>\n    </td>\n  </tr>\n</table>';
+}
+
+function updateSig() {
+  var name  = document.getElementById('sig-name').value;
+  var title = document.getElementById('sig-title').value;
+  var phone = document.getElementById('sig-phone').value;
+  var email = document.getElementById('sig-email').value;
+  var l = LOGOS[sigLogo];
+
+  document.getElementById('sig-avatar').textContent = (name || 'A').charAt(0).toUpperCase();
+  document.getElementById('sig-preview-from').textContent = name || 'First & Last Name';
+
+  document.getElementById('sig-preview-sig').innerHTML =
+    '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse">' +
+    '<tr>' +
+    '<td style="padding-right:22px;vertical-align:middle">' +
+    '<img src="assets/signatures/' + l.file + '" alt="STORY3" style="display:block;border:0;width:' + l.previewWidth + 'px;height:auto">' +
+    '</td>' +
+    '<td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle">' +
+    '<table cellpadding="0" cellspacing="0">' +
+    '<tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:22px;color:#04101d;padding-bottom:2px;line-height:26px;white-space:nowrap">' + (name || 'First &amp; Last Name') + '</td></tr>' +
+    '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;white-space:nowrap">' + (title || 'Your Title') + '</td></tr>' +
+    (phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4">' + name_esc(phone) + '</td></tr>' : '') +
+    '<tr><td><a href="mailto:' + (email||'') + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4">' + (email || 'you@story3capital.com') + '</a></td></tr>' +
+    '</table></td></tr></table>';
+
+  document.getElementById('sig-output').value = buildSigHtml(
+    name || 'First & Last Name',
+    title || 'Your Title',
+    phone,
+    email || 'you@story3capital.com',
+    sigLogo
+  );
+}
+
+function name_esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function selectLogo(n) {
+  sigLogo = n;
+  document.querySelectorAll('.sig-logo-btn').forEach(function(b) {
+    b.classList.toggle('sel', parseInt(b.dataset.logo) === n);
+  });
+  updateSig();
+}
+
+function copyHtml() {
+  var ta = document.getElementById('sig-output');
+  navigator.clipboard.writeText(ta.value).catch(function() { ta.select(); document.execCommand('copy'); });
+  var btn = document.getElementById('sig-copy-btn');
+  btn.textContent = '✓ Copied!';
+  btn.classList.add('sig-btn-success');
+  btn.classList.remove('sig-btn-primary');
+  setTimeout(function() {
+    btn.textContent = 'Copy HTML';
+    btn.classList.remove('sig-btn-success');
+    btn.classList.add('sig-btn-primary');
+  }, 2200);
+}
+
+function downloadPng() {
+  var el = document.getElementById('sig-preview-sig');
+  if (!window.html2canvas) {
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload = function() { runPng(el); };
+    document.head.appendChild(s);
+  } else { runPng(el); }
+}
+
+function runPng(el) {
+  html2canvas(el, { scale:2, backgroundColor:'#ffffff', useCORS:true, logging:false }).then(function(canvas) {
+    var a = document.createElement('a');
+    var name = document.getElementById('sig-name').value || 'signature';
+    a.download = 'story3-sig-' + name.replace(/\s+/g,'-').toLowerCase() + '.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  });
+}
+
+updateSig();
+</script>
+
+</body>
+</html>

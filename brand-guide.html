@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STORY3 Capital Partners — Brand Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & base ── */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;color:#fff;scroll-behavior:smooth}
+
+/* ── Top nav ── */
+.topnav{position:fixed;top:0;left:0;right:0;height:52px;background:#020609;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:200;box-sizing:border-box}
+.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em;text-decoration:none}
+.topnav-brand span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
+.topnav-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.05);border-radius:4px;padding:3px}
+.tnav-tab{background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:3px;cursor:pointer;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center}
+.tnav-tab:hover{color:rgba(255,255,255,0.7)}
+.tnav-tab.active{background:#04101d;color:#fff;box-shadow:0 1px 4px rgba(2,8,18,0.6)}
+
+/* ── Sidebar ── */
+.sidenav{position:fixed;top:52px;left:0;width:212px;height:calc(100vh - 52px);background:#020609;border-right:1px solid rgba(255,255,255,0.06);padding:32px 24px;box-sizing:border-box;overflow-y:auto;z-index:100}
+.snav-label{font-size:8px;font-weight:700;letter-spacing:2.5px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin:0 0 10px}
+.sidenav a.slink{display:block;font-family:'Newsreader',Georgia,serif;font-size:13px;color:rgba(255,255,255,0.38);text-decoration:none;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);transition:color 0.15s;line-height:1.3}
+.sidenav a.slink:hover{color:rgba(255,255,255,0.75)}
+.sidenav a.slink.active{color:#fff}
+.slink em{display:block;font-style:normal;font-family:'Figtree',Helvetica,sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:1px}
+.snav-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0}
+@media(max-width:900px){.sidenav{display:none}}
+
+/* ── Main ── */
+.bg-wrap{margin-left:212px;padding-top:52px}
+@media(max-width:900px){.bg-wrap{margin-left:0}}
+
+/* ── Section base ── */
+.bg-section{padding:80px 48px;max-width:1080px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,0.05)}
+.bg-section:last-child{border-bottom:none}
+
+/* ── Section header ── */
+.section-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;color:#3895D0;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:36px;color:#fff;margin-bottom:24px;line-height:1.15}
+.section-desc{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:26px;color:rgba(255,255,255,0.6);max-width:540px}
+.section-rule{font-family:'Figtree',Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px}
+
+/* ── Cover ── */
+#bg-cover{background:#031527;min-height:480px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;max-width:none;padding:100px 48px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.cover-logo{max-width:400px;width:100%;margin-bottom:48px;filter:brightness(0) invert(1)}
+.cover-eyebrow{font-size:9px;font-weight:700;letter-spacing:4px;color:rgba(255,255,255,0.32);text-transform:uppercase;margin-bottom:12px}
+.cover-title{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:20px;color:rgba(255,255,255,0.55);letter-spacing:0.05em}
+
+/* ── Logo display ── */
+.logo-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+@media(max-width:700px){.logo-pair{grid-template-columns:1fr}}
+.logo-box{border-radius:6px;padding:48px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.logo-box.dark{background:#031527;border:1px solid rgba(255,255,255,0.08)}
+.logo-box.light{background:#ffffff;border:1px solid rgba(0,0,0,0.08)}
+.logo-box img{max-width:240px;width:100%;height:auto}
+.logo-box-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.logo-box.light .logo-box-label{color:rgba(0,0,0,0.3)}
+.logo-note{margin-top:20px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:10px 16px;display:inline-block}
+
+/* ── Logo monogram grid ── */
+.logo-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px;max-width:640px}
+.logo-grid-row{display:contents}
+.mono-box{border-radius:6px;padding:36px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.mono-box.dark{background:#031527;border:1px solid rgba(255,255,255,0.08)}
+.mono-box.light{background:#fff;border:1px solid rgba(0,0,0,0.08)}
+.mono-box img{max-width:120px;width:100%;height:auto}
+.mono-box-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.mono-box.dark .mono-box-label{color:rgba(255,255,255,0.3)}
+.mono-box.light .mono-box-label{color:rgba(0,0,0,0.3)}
+.mono-tag{display:inline-block;font-size:7px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-bottom:4px}
+.tag-lined{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4)}
+.mono-box.light .tag-lined{background:rgba(0,0,0,0.06);color:rgba(0,0,0,0.35)}
+.tag-solid{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.5)}
+.mono-box.light .tag-solid{background:rgba(0,0,0,0.08);color:rgba(0,0,0,0.4)}
+
+/* ── Download button ── */
+.dl-btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:11px 22px;border-radius:3px;background:rgba(56,149,208,0.12);border:1px solid rgba(56,149,208,0.3);color:#3895D0;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.15s}
+.dl-btn:hover{background:rgba(56,149,208,0.2);border-color:rgba(56,149,208,0.5)}
+.dl-btn svg{flex-shrink:0}
+
+/* ── Logo don'ts ── */
+.donts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+@media(max-width:800px){.donts-grid{grid-template-columns:repeat(2,1fr)}}
+.dont-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:6px;overflow:hidden}
+.dont-preview{position:relative;background:#031527;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+.dont-preview::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 47%,rgba(255,255,255,0.18) 49%,rgba(255,255,255,0.18) 51%,transparent 53%)}
+.dont-preview img{max-width:55%;height:auto;filter:brightness(0) invert(1)}
+.dont-label{padding:10px 12px;font-size:7px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);line-height:1.5}
+
+/* ── Color swatches ── */
+.color-group{margin-top:36px}
+.color-group-label{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:6px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.color-usage{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:13px;line-height:22px;color:rgba(255,255,255,0.45);margin:10px 0 20px;max-width:560px}
+.swatches-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+.swatch-card{flex:0 0 auto;width:148px;cursor:pointer;border-radius:5px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);transition:transform 0.1s;position:relative}
+.swatch-card:hover{transform:translateY(-2px)}
+.swatch-color{height:80px;width:100%;position:relative}
+.swatch-copy-flash{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);opacity:0;transition:opacity 0.2s;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase}
+.swatch-card.copied .swatch-copy-flash{opacity:1}
+.swatch-info{background:#0c1824;padding:10px 12px}
+.swatch-name{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:5px}
+.swatch-hex{font-family:'ui-monospace',Menlo,monospace;font-size:12px;font-weight:700;color:#fff;margin-bottom:4px}
+.swatch-meta{font-family:'Figtree',Helvetica,sans-serif;font-size:8px;color:rgba(255,255,255,0.28);line-height:1.6}
+
+/* ── Color don'ts ── */
+.color-donts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+@media(max-width:700px){.color-donts-grid{grid-template-columns:1fr}}
+.color-dont{border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
+.color-dont-preview{height:100px;position:relative;display:flex;align-items:center;justify-content:center}
+.color-dont-preview::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 47%,rgba(255,0,0,0.5) 49%,rgba(255,0,0,0.5) 51%,transparent 53%)}
+.color-dont-label{padding:10px 14px;background:rgba(255,255,255,0.02);font-size:7px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);line-height:1.6}
+
+/* ── Typography ── */
+.type-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px}
+@media(max-width:700px){.type-pair{grid-template-columns:1fr}}
+.type-block{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:6px;padding:36px 32px}
+.type-specimen-lg{font-size:72px;line-height:1;margin-bottom:16px;color:#fff}
+.type-name{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:4px}
+.type-detail{font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:16px}
+.type-usage-tag{display:inline-block;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;background:rgba(56,149,208,0.12);border:1px solid rgba(56,149,208,0.2);color:#3895D0;border-radius:2px}
+.type-desc{margin-top:36px;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:14px;line-height:24px;color:rgba(255,255,255,0.5);border-top:1px solid rgba(255,255,255,0.06);padding-top:24px}
+
+/* ── Pattern ── */
+.pattern-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+@media(max-width:700px){.pattern-pair{grid-template-columns:1fr}}
+.pattern-box{border-radius:6px;overflow:hidden;aspect-ratio:16/9;position:relative;display:flex;align-items:flex-end;padding:20px}
+.pattern-dark{background:#031527}
+.pattern-light{background:#fff}
+.wave-svg{position:absolute;inset:0;width:100%;height:100%}
+.pattern-box-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1}
+.pattern-dark .pattern-box-label{color:rgba(255,255,255,0.4)}
+.pattern-light .pattern-box-label{color:rgba(4,16,29,0.35)}
+.pattern-rules{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.pattern-rule{display:flex;gap:12px;align-items:flex-start;font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:14px;line-height:22px;color:rgba(255,255,255,0.5)}
+.pattern-rule-dot{width:6px;height:6px;border-radius:50%;background:#3895D0;flex-shrink:0;margin-top:8px}
+
+/* ── Applications ── */
+.apps-desc{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;line-height:26px;color:rgba(255,255,255,0.5);max-width:540px;margin-bottom:36px}
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.apps-grid{grid-template-columns:1fr 1fr}}
+.app-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:6px;overflow:hidden}
+.app-card-img{background:#031527;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2)}
+.app-card-label{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+
+/* ── Copy toast ── */
+#copy-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#031527;border:1px solid rgba(56,149,208,0.4);color:#3895D0;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;border-radius:4px;opacity:0;transition:all 0.25s;z-index:999;pointer-events:none}
+#copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── Scroll spy active ── */
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP NAV ═══ -->
+<nav class="topnav">
+  <a class="topnav-brand" href="index.html">STORY3 <span>Capital Partners</span></a>
+  <div class="topnav-tabs">
+    <a href="index.html"      class="tnav-tab">Email Templates</a>
+    <a href="signatures.html" class="tnav-tab">Email Signatures</a>
+    <a href="assets.html"     class="tnav-tab">Assets</a>
+    <a href="brand-guide.html" class="tnav-tab active">Brand Guide</a>
+  </div>
+</nav>
+
+<!-- ═══ SIDEBAR ═══ -->
+<nav class="sidenav" id="sidenav">
+  <p class="snav-label">Brand Guide</p>
+  <a href="#bg-cover"     class="slink"><em>00</em>Cover</a>
+  <a href="#bg-logo-primary" class="slink"><em>01</em>Primary Logo</a>
+  <a href="#bg-logo-inline"  class="slink"><em>02</em>Inline Logo</a>
+  <a href="#bg-logo-initials" class="slink"><em>03</em>Initials Logo</a>
+  <a href="#bg-logo-alt"  class="slink"><em>04</em>Alt. Initials Logo</a>
+  <a href="#bg-logo-donts" class="slink"><em>05</em>Logo Don'ts</a>
+  <hr class="snav-divider">
+  <a href="#bg-color"      class="slink"><em>06</em>Color Palette</a>
+  <a href="#bg-color-donts" class="slink"><em>07</em>Color Don'ts</a>
+  <hr class="snav-divider">
+  <a href="#bg-typography" class="slink"><em>08</em>Typography</a>
+  <a href="#bg-pattern"    class="slink"><em>09</em>Pattern</a>
+  <a href="#bg-applications" class="slink"><em>10</em>Applications</a>
+</nav>
+
+<!-- ═══ MAIN ═══ -->
+<div class="bg-wrap">
+
+<!-- ══ 00 · COVER ══ -->
+<section id="bg-cover">
+  <img src="assets/signatures/sig-engraved.png" class="cover-logo" alt="STORY3 Capital Partners">
+  <p class="cover-eyebrow">Brand Identity System</p>
+  <p class="cover-title">Brand Guide &nbsp;·&nbsp; 2026</p>
+</section>
+
+<!-- ══ 01 · PRIMARY LOGO ══ -->
+<section id="bg-logo-primary" class="bg-section">
+  <p class="section-eyebrow">01 &nbsp;·&nbsp; Logo System</p>
+  <h2 class="section-title">Primary Logo</h2>
+  <p class="section-desc">Our primary logo is the most recognizable expression of our brand identity. It uses a commanding high-contrast serif typeface to convey the authority and staying power expected of a serious investment firm. The bold "3" serves as both a structural anchor and a symbol of narrative progression, reflecting Story3's belief that the most enduring returns are built across three distinct chapters of a company's growth journey.</p>
+  <p class="section-desc" style="margin-top:14px">This logo should be used in all primary brand applications, including digital, print and promotional items.</p>
+  <div class="logo-pair">
+    <div class="logo-box dark">
+      <img src="assets/LogoFill_Black_Full.png" alt="STORY3 primary logo white" style="filter:brightness(0) invert(1)">
+      <span class="logo-box-label">On Navy</span>
+    </div>
+    <div class="logo-box light">
+      <img src="assets/LogoFill_Black_Full.png" alt="STORY3 primary logo dark">
+      <span class="logo-box-label">On White</span>
+    </div>
+  </div>
+  <a href="assets/LogoFill_Black_Full.png" download class="dl-btn">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Download Primary Logo
+  </a>
+</section>
+
+<!-- ══ 02 · INLINE LOGO ══ -->
+<section id="bg-logo-inline" class="bg-section">
+  <p class="section-eyebrow">02 &nbsp;·&nbsp; Logo System</p>
+  <h2 class="section-title">Inline Logo</h2>
+  <p class="section-desc">The secondary logo uses a layered, multi-line serif treatment to evoke depth, precision, and the compounding nature of capital — each concentric stroke a visual metaphor for the layers of value a great investment builds over time. The intricate linework brings an architectural elegance to the letterforms, signaling a firm that approaches every deal with the same rigor, craftsmanship, and long-term perspective that defines enduring financial partnerships.</p>
+  <p class="section-desc" style="margin-top:14px">This logo is a supporting mark and should only be used in tandem with the primary logo.</p>
+  <div class="logo-pair">
+    <div class="logo-box dark">
+      <img src="assets/signatures/sig-engraved.png" alt="STORY3 inline logo white" style="filter:brightness(0) invert(1)">
+      <span class="logo-box-label">On Navy</span>
+    </div>
+    <div class="logo-box light">
+      <img src="assets/signatures/sig-engraved.png" alt="STORY3 inline logo dark">
+      <span class="logo-box-label">On White</span>
+    </div>
+  </div>
+  <span class="logo-note">Supporting mark — use in tandem with the primary logo only</span>
+</section>
+
+<!-- ══ 03 · INITIALS LOGO ══ -->
+<section id="bg-logo-initials" class="bg-section">
+  <p class="section-eyebrow">03 &nbsp;·&nbsp; Logo System</p>
+  <h2 class="section-title">Initials Logo</h2>
+  <p class="section-desc">The full monogram maximizes scalability on marketing materials. This should not be used in place of the primary logo. Usage examples include business cards and promotional apparel items like hats or bags.</p>
+  <div class="logo-grid-2">
+    <div class="mono-box dark">
+      <span class="mono-tag tag-lined">Lined</span>
+      <img src="assets/Logo_FullMonogram_Black.png" alt="S3 lined monogram white" style="filter:brightness(0) invert(1);opacity:0.88">
+      <span class="mono-box-label">On Navy</span>
+    </div>
+    <div class="mono-box light">
+      <span class="mono-tag tag-lined">Lined</span>
+      <img src="assets/Logo_FullMonogram_Black.png" alt="S3 lined monogram dark">
+      <span class="mono-box-label">On White</span>
+    </div>
+    <div class="mono-box dark">
+      <span class="mono-tag tag-solid">Solid</span>
+      <img src="assets/signatures/sig-monogram.png" alt="S3 solid monogram white" style="filter:brightness(0) invert(1)">
+      <span class="mono-box-label">On Navy</span>
+    </div>
+    <div class="mono-box light">
+      <span class="mono-tag tag-solid">Solid</span>
+      <img src="assets/signatures/sig-monogram.png" alt="S3 solid monogram dark">
+      <span class="mono-box-label">On White</span>
+    </div>
+  </div>
+  <a href="assets/Logo_FullMonogram_Black.png" download class="dl-btn" style="margin-right:10px">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Lined Monogram
+  </a>
+  <a href="assets/signatures/sig-monogram.png" download class="dl-btn">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Solid Monogram
+  </a>
+</section>
+
+<!-- ══ 04 · ALTERNATE INITIALS ══ -->
+<section id="bg-logo-alt" class="bg-section">
+  <p class="section-eyebrow">04 &nbsp;·&nbsp; Logo System</p>
+  <h2 class="section-title">Alternate Initials Logo</h2>
+  <p class="section-desc">Similar to the initials logo, this alternate version omits "Capital Partners" to maximize scalability on small applications. This should not be used in place of the primary logo. Usage examples include promotional items like pens, stickers and smaller apparel such as lanyards or buttons.</p>
+  <div class="logo-grid-2">
+    <div class="mono-box dark">
+      <span class="mono-tag tag-lined">Lined</span>
+      <img src="assets/Logo_FullMonogram_Black.png" alt="S3 alt lined dark" style="filter:brightness(0) invert(1);opacity:0.88;max-width:80px">
+      <span class="mono-box-label">On Navy</span>
+    </div>
+    <div class="mono-box light">
+      <span class="mono-tag tag-lined">Lined</span>
+      <img src="assets/Logo_FullMonogram_Black.png" alt="S3 alt lined light" style="max-width:80px">
+      <span class="mono-box-label">On White</span>
+    </div>
+    <div class="mono-box dark">
+      <span class="mono-tag tag-solid">Solid</span>
+      <img src="assets/signatures/sig-monogram.png" alt="S3 alt solid dark" style="filter:brightness(0) invert(1);max-width:80px">
+      <span class="mono-box-label">On Navy</span>
+    </div>
+    <div class="mono-box light">
+      <span class="mono-tag tag-solid">Solid</span>
+      <img src="assets/signatures/sig-monogram.png" alt="S3 alt solid light" style="max-width:80px">
+      <span class="mono-box-label">On White</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 · LOGO DON'TS ══ -->
+<section id="bg-logo-donts" class="bg-section">
+  <p class="section-eyebrow">05 &nbsp;·&nbsp; Logo System</p>
+  <h2 class="section-title">Logo Don'ts</h2>
+  <p class="section-desc">Please keep these usage guardrails in mind when creating any marketing materials. Logo misuse may dilute the brand's impact and intent. These rules apply to all iterations of the Story3 logo.</p>
+  <div class="donts-grid">
+    <div class="dont-card">
+      <div class="dont-preview">
+        <img src="assets/LogoFill_Black_Full.png" alt="" style="filter:brightness(0) invert(1);transform:scaleX(1.4)">
+      </div>
+      <div class="dont-label">Do not stretch or distort logo</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview">
+        <img src="assets/signatures/sig-engraved.png" alt="" style="filter:brightness(0) invert(1);max-width:30%">
+      </div>
+      <div class="dont-label">Do not use inline logo at small sizes</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview" style="background:#031527">
+        <img src="assets/signatures/sig-engraved.png" alt="" style="filter:brightness(0) invert(1) blur(0.5px);opacity:0.5">
+      </div>
+      <div class="dont-label">Do not change line weight of inline logo</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview">
+        <span style="font-family:Georgia,serif;font-size:18px;color:rgba(255,255,255,0.6);letter-spacing:2px">Story3</span>
+      </div>
+      <div class="dont-label">Do not recreate logo in alternate typefaces</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview">
+        <img src="assets/LogoFill_Black_Full.png" alt="" style="filter:sepia(1) saturate(5) hue-rotate(320deg) brightness(0.8)">
+      </div>
+      <div class="dont-label">Do not recolor logo with secondary color</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview">
+        <img src="assets/LogoFill_Black_Full.png" alt="" style="filter:brightness(0) invert(1);transform:rotate(-15deg)">
+      </div>
+      <div class="dont-label">Do not display logo at an angle</div>
+    </div>
+    <div class="dont-card">
+      <div class="dont-preview" style="background:#888;justify-content:center">
+        <img src="assets/LogoFill_Black_Full.png" alt="" style="filter:brightness(0) invert(1);opacity:0.5">
+      </div>
+      <div class="dont-label">Do not display logo in unapproved or low contrast combinations</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 · COLOR PALETTE ══ -->
+<section id="bg-color" class="bg-section">
+  <p class="section-eyebrow">06 &nbsp;·&nbsp; Color</p>
+  <h2 class="section-title">Color Palette</h2>
+  <p class="section-desc">Click any swatch to copy the hex value.</p>
+
+  <div class="color-group">
+    <p class="color-group-label">Primary</p>
+    <p class="color-usage">System colors and their variations should be used in default systemic elements. Examples include body copy, titles, page backgrounds, and tooltips.</p>
+    <div class="swatches-row">
+      <div class="swatch-card" onclick="copyHex(this,'#031527')">
+        <div class="swatch-color" style="background:#031527"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Navy</p>
+          <p class="swatch-hex">#031527</p>
+          <p class="swatch-meta">Pantone 296C<br>92C 46M 0Y 85K<br>3R 21G 39B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#FFFFFF')">
+        <div class="swatch-color" style="background:#ffffff;border-bottom:1px solid rgba(0,0,0,0.08)"><div class="swatch-copy-flash" style="color:#333">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">White</p>
+          <p class="swatch-hex">#FFFFFF</p>
+          <p class="swatch-meta">0C 0M 0Y 0K<br>255R 255G 255B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#000000')">
+        <div class="swatch-color" style="background:#000000"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Black</p>
+          <p class="swatch-hex">#000000</p>
+          <p class="swatch-meta">Pantone Black 3C<br>0C 0M 0Y 100K<br>0R 0G 0B</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="color-group">
+    <p class="color-group-label">Secondary</p>
+    <p class="color-usage">Accent colors that support the default brand colors. Use for buttons, text links, iconography, and captions only — not for backgrounds or design elements larger than buttons. Orange Red is reserved for Portfolio popups and site footer accents.</p>
+    <div class="swatches-row">
+      <div class="swatch-card" onclick="copyHex(this,'#04101D')">
+        <div class="swatch-color" style="background:#04101D"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Dark Navy</p>
+          <p class="swatch-hex">#04101D</p>
+          <p class="swatch-meta">Pantone Black 6C<br>50C 25M 0Y 21K<br>4R 16G 29B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#3895D0')">
+        <div class="swatch-color" style="background:#3895D0"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Estoril Blue</p>
+          <p class="swatch-hex">#3895D0</p>
+          <p class="swatch-meta">Pantone 7686C<br>65C 21M 0Y 21K<br>56R 149G 208B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#E24E21')">
+        <div class="swatch-color" style="background:#E24E21"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Orange Red</p>
+          <p class="swatch-hex">#E24E21</p>
+          <p class="swatch-meta">Pantone 7579C<br>0C 60M 85Y 14K<br>226R 78G 33B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#EEC354')">
+        <div class="swatch-color" style="background:#EEC354"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Gold</p>
+          <p class="swatch-hex">#EEC354</p>
+          <p class="swatch-meta">Pantone 123C<br>0C 23M 82Y 0K<br>238R 195G 84B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#888888')">
+        <div class="swatch-color" style="background:#888888"><div class="swatch-copy-flash">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Gray</p>
+          <p class="swatch-hex">#888888</p>
+          <p class="swatch-meta">Pantone 423C<br>0C 2M 5Y 45K<br>136R 136G 136B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#C0CFD0')">
+        <div class="swatch-color" style="background:#C0CFD0"><div class="swatch-copy-flash" style="color:#333">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Light Gray</p>
+          <p class="swatch-hex">#C0CFD0</p>
+          <p class="swatch-meta">Pantone Cool Gray 2C<br>0C 0M 1Y 18K<br>192R 207G 208B</p>
+        </div>
+      </div>
+      <div class="swatch-card" onclick="copyHex(this,'#E2EBF0')">
+        <div class="swatch-color" style="background:#E2EBF0"><div class="swatch-copy-flash" style="color:#333">Copied</div></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Cool Gray</p>
+          <p class="swatch-hex">#E2EBF0</p>
+          <p class="swatch-meta">Pantone 656C<br>7C 3M 0Y 7K<br>226R 235G 240B</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 · COLOR DON'TS ══ -->
+<section id="bg-color-donts" class="bg-section">
+  <p class="section-eyebrow">07 &nbsp;·&nbsp; Color</p>
+  <h2 class="section-title">Color Don'ts</h2>
+  <p class="section-desc">Please keep these guardrails in mind when creating any marketing materials. Misuse of these colors may dilute the brand's impact and intent.</p>
+  <div class="color-donts-grid">
+    <div class="color-dont">
+      <div class="color-dont-preview" style="background:#3895D0">
+        <img src="assets/Logo_FullMonogram_Black.png" alt="" style="filter:brightness(0) invert(1);max-width:60px;position:relative;z-index:0">
+      </div>
+      <div class="color-dont-label">Do not use a secondary color for backgrounds</div>
+    </div>
+    <div class="color-dont">
+      <div class="color-dont-preview" style="background:#000;display:flex;align-items:center;justify-content:center">
+        <span style="font-family:'Newsreader',Georgia,serif;font-size:14px;color:#031527;position:relative;z-index:0">Leadership Team</span>
+      </div>
+      <div class="color-dont-label">Do not mix Black and Navy on a single application</div>
+    </div>
+    <div class="color-dont">
+      <div class="color-dont-preview" style="background:#031527">
+        <span style="font-family:'Newsreader',Georgia,serif;font-size:18px;color:#E24E21;position:relative;z-index:0">Body copy text</span>
+      </div>
+      <div class="color-dont-label">Do not use secondary color for text outside of links, buttons, or captions</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 08 · TYPOGRAPHY ══ -->
+<section id="bg-typography" class="bg-section">
+  <p class="section-eyebrow">08 &nbsp;·&nbsp; Typography</p>
+  <h2 class="section-title">Typography</h2>
+  <p class="section-desc">Together, the pairing mirrors the firm's own positioning — the depth and credibility of an established institution expressed through the clarity of a genuine collaborator — while creating natural typographic hierarchy that guides the reader from narrative context down to precise, actionable detail.</p>
+  <div class="type-pair">
+    <div class="type-block">
+      <div class="type-specimen-lg" style="font-family:'Newsreader',Georgia,serif;font-weight:400">Aa</div>
+      <p class="type-name">Newsreader</p>
+      <p class="type-detail">Light · Regular · Italic</p>
+      <span class="type-usage-tag">H-class · Body copy · Captions</span>
+      <p class="type-desc">Newsreader, a contemporary serif designed for extended on-screen reading, brings editorial authority to STORY3's brand voice. Its high contrast strokes and classical proportions signal the seasoned judgment that defines a firm built on decades of investing experience.</p>
+    </div>
+    <div class="type-block">
+      <div class="type-specimen-lg" style="font-family:'Figtree',Helvetica,sans-serif;font-weight:400;letter-spacing:2px">ABC</div>
+      <p class="type-name">Figtree</p>
+      <p class="type-detail">Regular · All Caps</p>
+      <span class="type-usage-tag">Eyebrow subheaders · Minor messaging</span>
+      <p class="type-desc">Figtree, a clean geometric sans-serif, provides the counterbalance: modern, legible, and approachable, it reflects STORY3's commitment to transparent partnership and straightforward communication with founders and management teams.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 09 · PATTERN ══ -->
+<section id="bg-pattern" class="bg-section">
+  <p class="section-eyebrow">09 &nbsp;·&nbsp; Pattern</p>
+  <h2 class="section-title">Wave Pattern</h2>
+  <p class="section-desc">The wave illustration is a core visual element of the STORY3 brand, functioning as both a structural layout device and a subtle metaphor for the fluid, cyclical nature of capital markets and long-term investment.</p>
+  <div class="pattern-pair">
+    <div class="pattern-box pattern-dark">
+      <svg class="wave-svg" viewBox="0 0 600 338" preserveAspectRatio="xMidYMid slice">
+        <path d="M-50,220 C80,180 120,100 250,140 S400,200 650,120" stroke="rgba(255,255,255,0.18)" stroke-width="1.2" fill="none"/>
+        <path d="M-50,230 C80,190 120,110 250,150 S400,210 650,130" stroke="rgba(255,255,255,0.14)" stroke-width="1" fill="none"/>
+        <path d="M-50,240 C80,200 120,120 250,160 S400,220 650,140" stroke="rgba(255,255,255,0.10)" stroke-width="0.9" fill="none"/>
+        <path d="M-50,210 C80,170 120,90 250,130 S400,190 650,110" stroke="rgba(255,255,255,0.12)" stroke-width="0.8" fill="none"/>
+        <path d="M-50,250 C80,210 120,130 250,170 S400,230 650,150" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none"/>
+        <path d="M-50,200 C80,160 120,80 250,120 S400,180 650,100" stroke="rgba(255,255,255,0.09)" stroke-width="0.7" fill="none"/>
+        <path d="M-50,260 C80,220 120,140 250,180 S400,240 650,160" stroke="rgba(255,255,255,0.07)" stroke-width="0.7" fill="none"/>
+        <path d="M-50,270 C80,230 120,150 250,190 S400,250 650,170" stroke="rgba(255,255,255,0.05)" stroke-width="0.7" fill="none"/>
+      </svg>
+      <span class="pattern-box-label">Navy background — white lines at 20% opacity</span>
+    </div>
+    <div class="pattern-box pattern-light">
+      <svg class="wave-svg" viewBox="0 0 600 338" preserveAspectRatio="xMidYMid slice">
+        <path d="M-50,220 C80,180 120,100 250,140 S400,200 650,120" stroke="rgba(56,149,208,0.48)" stroke-width="1.2" fill="none"/>
+        <path d="M-50,230 C80,190 120,110 250,150 S400,210 650,130" stroke="rgba(56,149,208,0.38)" stroke-width="1" fill="none"/>
+        <path d="M-50,240 C80,200 120,120 250,160 S400,220 650,140" stroke="rgba(56,149,208,0.28)" stroke-width="0.9" fill="none"/>
+        <path d="M-50,210 C80,170 120,90 250,130 S400,190 650,110" stroke="rgba(56,149,208,0.32)" stroke-width="0.8" fill="none"/>
+        <path d="M-50,250 C80,210 120,130 250,170 S400,230 650,150" stroke="rgba(56,149,208,0.22)" stroke-width="0.8" fill="none"/>
+        <path d="M-50,200 C80,160 120,80 250,120 S400,180 650,100" stroke="rgba(56,149,208,0.24)" stroke-width="0.7" fill="none"/>
+        <path d="M-50,260 C80,220 120,140 250,180 S400,240 650,160" stroke="rgba(56,149,208,0.16)" stroke-width="0.7" fill="none"/>
+        <path d="M-50,270 C80,230 120,150 250,190 S400,250 650,170" stroke="rgba(56,149,208,0.12)" stroke-width="0.7" fill="none"/>
+      </svg>
+      <span class="pattern-box-label" style="color:rgba(4,16,29,0.35)">White background — Estoril Blue lines at 50% opacity</span>
+    </div>
+  </div>
+  <div class="pattern-rules">
+    <div class="pattern-rule"><div class="pattern-rule-dot"></div><span>The wave should always feel refined and intentional — never decorative for its own sake. Deploy at full-bleed scale to create depth and visual momentum across section transitions.</span></div>
+    <div class="pattern-rule"><div class="pattern-rule-dot"></div><span>Avoid recoloring the wave outside the approved palette, or cropping it in ways that disrupt its natural flow.</span></div>
+    <div class="pattern-rule"><div class="pattern-rule-dot"></div><span>Do not scale it down to a size where its fluid geometry loses definition and reads as noise rather than signal.</span></div>
+    <div class="pattern-rule"><div class="pattern-rule-dot"></div><span>Wave lines are always white at 20% opacity on Navy. On white backgrounds, always Estoril Blue at 50%.</span></div>
+  </div>
+</section>
+
+<!-- ══ 10 · APPLICATIONS ══ -->
+<section id="bg-applications" class="bg-section">
+  <p class="section-eyebrow">10 &nbsp;·&nbsp; Applications</p>
+  <h2 class="section-title">Applications</h2>
+  <p class="apps-desc">Brand applications across physical and digital touchpoints. The STORY3 identity is designed to carry authority across every format — from apparel to signage to branded packaging.</p>
+  <div class="apps-grid">
+    <div class="app-card">
+      <div class="app-card-img">Jacket · Embroidery</div>
+      <div class="app-card-label">Apparel</div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-img">Baseball Cap · S3 Mark</div>
+      <div class="app-card-label">Headwear</div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-img">Notebook · Wordmark</div>
+      <div class="app-card-label">Stationery</div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-img">Wall Signage · Full Logo</div>
+      <div class="app-card-label">Signage</div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-img">Branded Box · Wave Pattern</div>
+      <div class="app-card-label">Packaging</div>
+    </div>
+    <div class="app-card">
+      <div class="app-card-img">Business Card · Monogram</div>
+      <div class="app-card-label">Print</div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /bg-wrap -->
+
+<!-- Copy toast -->
+<div id="copy-toast">Copied to clipboard</div>
+
+<script>
+// ── Click-to-copy hex ──
+function copyHex(card, hex) {
+  navigator.clipboard.writeText(hex).catch(() => {});
+  card.classList.add('copied');
+  setTimeout(() => card.classList.remove('copied'), 1200);
+  const toast = document.getElementById('copy-toast');
+  toast.textContent = hex + ' copied';
+  toast.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// ── Scroll spy ──
+const sections = document.querySelectorAll('.bg-section, #bg-cover');
+const links = document.querySelectorAll('.sidenav a.slink');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector('.sidenav a[href="#' + e.target.id + '"]');
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

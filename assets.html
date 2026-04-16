@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STORY3 Capital Partners — Assets</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & base ── */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;color:#fff;scroll-behavior:smooth}
+
+/* ── Top nav ── */
+.topnav{position:fixed;top:0;left:0;right:0;height:52px;background:#020609;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:200;box-sizing:border-box}
+.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em;text-decoration:none}
+.topnav-brand span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
+.topnav-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.05);border-radius:4px;padding:3px}
+.tnav-tab{background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:3px;cursor:pointer;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center}
+.tnav-tab:hover{color:rgba(255,255,255,0.7)}
+.tnav-tab.active{background:#04101d;color:#fff;box-shadow:0 1px 4px rgba(2,8,18,0.6)}
+
+/* ── Main content area ── */
+.main-wrap{padding-top:52px;min-height:100vh}
+.page-header{padding:64px 48px 40px;max-width:1160px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,0.05)}
+.page-eyebrow{font-size:9px;font-weight:700;letter-spacing:3px;color:#3895D0;text-transform:uppercase;margin-bottom:10px}
+.page-title{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:40px;color:#fff;line-height:1.1}
+.page-desc{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:15px;color:rgba(255,255,255,0.5);margin-top:14px;max-width:560px;line-height:1.75}
+
+/* ── Category sections ── */
+.cat-section{padding:60px 48px;max-width:1160px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,0.05)}
+.cat-section:last-child{border-bottom:none;padding-bottom:100px}
+.cat-header{display:flex;align-items:baseline;gap:16px;margin-bottom:28px}
+.cat-title{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:26px;color:#fff}
+.cat-count{font-size:9px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.22);text-transform:uppercase;padding:4px 10px;background:rgba(255,255,255,0.05);border-radius:10px}
+.cat-desc{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:13px;color:rgba(255,255,255,0.42);margin-bottom:28px;line-height:1.7;max-width:580px}
+
+/* ── Image grid (zoom / linkedin) ── */
+.img-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.img-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.img-grid{grid-template-columns:1fr}}
+.img-card{background:#04101d;border:1px solid rgba(255,255,255,0.07);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.15s}
+.img-card:hover{border-color:rgba(56,149,208,0.3)}
+.img-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#031527}
+.img-thumb-placeholder{width:100%;aspect-ratio:16/9;background:#031527;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}
+.img-thumb-placeholder svg{opacity:0.15}
+.img-thumb-placeholder-label{font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.2);text-transform:uppercase}
+.img-card-footer{padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.img-card-name{font-size:10px;font-weight:700;letter-spacing:0.5px;color:rgba(255,255,255,0.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.img-dl-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:3px;background:rgba(56,149,208,0.1);border:1px solid rgba(56,149,208,0.25);color:#3895D0;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.15s;white-space:nowrap}
+.img-dl-btn:hover{background:rgba(56,149,208,0.2);border-color:rgba(56,149,208,0.5)}
+
+/* ── Letterhead list ── */
+.doc-list{display:flex;flex-direction:column;gap:8px}
+.doc-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:#04101d;border:1px solid rgba(255,255,255,0.06);border-radius:6px;transition:border-color 0.15s}
+.doc-row:hover{border-color:rgba(56,149,208,0.25)}
+.doc-left{display:flex;align-items:center;gap:14px}
+.doc-icon{width:36px;height:36px;background:rgba(56,149,208,0.08);border:1px solid rgba(56,149,208,0.15);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.doc-icon svg{opacity:0.7}
+.doc-name{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:15px;color:rgba(255,255,255,0.85)}
+.doc-meta{font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.25);text-transform:uppercase;margin-top:2px}
+.doc-dl-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:3px;background:rgba(56,149,208,0.1);border:1px solid rgba(56,149,208,0.25);color:#3895D0;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.15s;white-space:nowrap;flex-shrink:0}
+.doc-dl-btn:hover{background:rgba(56,149,208,0.2);border-color:rgba(56,149,208,0.5)}
+
+/* ── PPT single card ── */
+.ppt-card{display:flex;align-items:center;gap:28px;padding:28px 28px;background:#04101d;border:1px solid rgba(255,255,255,0.07);border-radius:8px;max-width:600px;transition:border-color 0.15s}
+.ppt-card:hover{border-color:rgba(56,149,208,0.3)}
+.ppt-thumb{width:120px;height:68px;background:#031527;border-radius:4px;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.06)}
+.ppt-thumb svg{opacity:0.2}
+.ppt-info{flex:1}
+.ppt-name{font-family:'Newsreader',Georgia,serif;font-weight:400;font-size:17px;color:#fff;margin-bottom:4px}
+.ppt-meta{font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.25);text-transform:uppercase;margin-bottom:16px}
+.ppt-dl-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:3px;background:rgba(56,149,208,0.12);border:1px solid rgba(56,149,208,0.3);color:#3895D0;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.15s}
+.ppt-dl-btn:hover{background:rgba(56,149,208,0.22);border-color:rgba(56,149,208,0.55)}
+
+/* ── Zoom coming-soon notice ── */
+.zoom-notice{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:rgba(238,195,84,0.06);border:1px solid rgba(238,195,84,0.15);border-radius:5px;margin-bottom:24px;max-width:680px}
+.zoom-notice-icon{flex-shrink:0;margin-top:1px}
+.zoom-notice p{font-size:11px;line-height:1.65;color:rgba(255,255,255,0.45)}
+.zoom-notice strong{color:rgba(238,195,84,0.8)}
+</style>
+</head>
+<body>
+
+<!-- ── Top nav ── -->
+<nav class="topnav">
+  <a href="index.html" class="topnav-brand">STORY3 Capital Partners <span>Brand Tools</span></a>
+  <div class="topnav-tabs">
+    <a href="index.html"       class="tnav-tab">Email Templates</a>
+    <a href="signatures.html"  class="tnav-tab">Email Signatures</a>
+    <a href="assets.html"      class="tnav-tab active">Assets</a>
+    <a href="brand-guide.html" class="tnav-tab">Brand Guide</a>
+  </div>
+</nav>
+
+<div class="main-wrap">
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div class="page-eyebrow">Brand Assets</div>
+    <h1 class="page-title">Downloadable Assets</h1>
+    <p class="page-desc">Official STORY3 materials for presentations, backgrounds, and communications. Click any file to download directly.</p>
+  </div>
+
+  <!-- ──────────────────────────────────────────
+       ZOOM BACKGROUNDS
+  ─────────────────────────────────────────── -->
+  <section class="cat-section" id="zoom">
+    <div class="cat-header">
+      <h2 class="cat-title">Zoom Backgrounds</h2>
+      <span class="cat-count">8 files</span>
+    </div>
+    <p class="cat-desc">Virtual meeting backgrounds in light and dark variants. Download and set in Zoom under Settings → Virtual Background.</p>
+
+    <div class="zoom-notice">
+      <svg class="zoom-notice-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.25" stroke="rgba(238,195,84,0.6)" stroke-width="1.5"/><rect x="7.25" y="5" width="1.5" height="5.5" rx=".75" fill="rgba(238,195,84,0.6)"/><circle cx="8" cy="12" r=".75" fill="rgba(238,195,84,0.6)"/></svg>
+      <p><strong>Files pending export.</strong> These backgrounds are ready in Figma. Export PNGs from the <strong>STORY3 Zoom Backgrounds</strong> frame (node 6046-2) and drop them in <code>assets/zoom-backgrounds/</code> named <code>Zoom-BG-1.png</code> through <code>Zoom-BG-8.png</code> — they'll appear here automatically.</p>
+    </div>
+
+    <div class="img-grid">
+      <!-- Light backgrounds 1–4 -->
+      <div class="img-card">
+        <div class="img-thumb-placeholder">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Light 1</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 1 — Light</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-1.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Light 2</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 2 — Light</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-2.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Light 3</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 3 — Light</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-3.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Light 4</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 4 — Light</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-4.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <!-- Dark backgrounds 5–8 -->
+      <div class="img-card">
+        <div class="img-thumb-placeholder" style="background:#031527">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Dark 1</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 5 — Dark</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-5.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder" style="background:#031527">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Dark 2</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 6 — Dark</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-6.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder" style="background:#031527">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Dark 3</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 7 — Dark</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-7.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <div class="img-thumb-placeholder" style="background:#031527">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" stroke="white" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M8 20l5-6 4 5 2-3 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="img-thumb-placeholder-label">Dark 4</div>
+        </div>
+        <div class="img-card-footer">
+          <span class="img-card-name">Zoom BG 8 — Dark</span>
+          <a href="assets/zoom-backgrounds/Zoom-BG-8.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       LETTERHEAD
+  ─────────────────────────────────────────── -->
+  <section class="cat-section" id="letterhead">
+    <div class="cat-header">
+      <h2 class="cat-title">Letterhead</h2>
+      <span class="cat-count">5 files</span>
+    </div>
+    <p class="cat-desc">Official STORY3 letterhead templates in Word format. Five variants — use whichever best fits your correspondence.</p>
+
+    <div class="doc-list">
+
+      <div class="doc-row">
+        <div class="doc-left">
+          <div class="doc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1.5" stroke="#3895D0" stroke-width="1.3"/><path d="M4 5h6M4 7.5h6M4 10h4" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round"/><path d="M10 1v3.5h3" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="doc-name">Story3 Letterhead 1</div>
+            <div class="doc-meta">DOCX · Microsoft Word</div>
+          </div>
+        </div>
+        <a href="assets/letterheads/Story3-Letterhead-1.docx" download class="doc-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </a>
+      </div>
+
+      <div class="doc-row">
+        <div class="doc-left">
+          <div class="doc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1.5" stroke="#3895D0" stroke-width="1.3"/><path d="M4 5h6M4 7.5h6M4 10h4" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round"/><path d="M10 1v3.5h3" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="doc-name">Story3 Letterhead 2</div>
+            <div class="doc-meta">DOCX · Microsoft Word</div>
+          </div>
+        </div>
+        <a href="assets/letterheads/Story3-Letterhead-2.docx" download class="doc-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </a>
+      </div>
+
+      <div class="doc-row">
+        <div class="doc-left">
+          <div class="doc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1.5" stroke="#3895D0" stroke-width="1.3"/><path d="M4 5h6M4 7.5h6M4 10h4" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round"/><path d="M10 1v3.5h3" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="doc-name">Story3 Letterhead 3</div>
+            <div class="doc-meta">DOCX · Microsoft Word</div>
+          </div>
+        </div>
+        <a href="assets/letterheads/Story3-Letterhead-3.docx" download class="doc-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </a>
+      </div>
+
+      <div class="doc-row">
+        <div class="doc-left">
+          <div class="doc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1.5" stroke="#3895D0" stroke-width="1.3"/><path d="M4 5h6M4 7.5h6M4 10h4" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round"/><path d="M10 1v3.5h3" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="doc-name">Story3 Letterhead 4</div>
+            <div class="doc-meta">DOCX · Microsoft Word</div>
+          </div>
+        </div>
+        <a href="assets/letterheads/Story3-Letterhead-4.docx" download class="doc-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </a>
+      </div>
+
+      <div class="doc-row">
+        <div class="doc-left">
+          <div class="doc-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="1" width="10" height="14" rx="1.5" stroke="#3895D0" stroke-width="1.3"/><path d="M4 5h6M4 7.5h6M4 10h4" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round"/><path d="M10 1v3.5h3" stroke="#3895D0" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="doc-name">Story3 Letterhead 5</div>
+            <div class="doc-meta">DOCX · Microsoft Word</div>
+          </div>
+        </div>
+        <a href="assets/letterheads/Story3-Letterhead-5.docx" download class="doc-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       POWERPOINT
+  ─────────────────────────────────────────── -->
+  <section class="cat-section" id="ppt">
+    <div class="cat-header">
+      <h2 class="cat-title">PowerPoint Template</h2>
+      <span class="cat-count">1 file</span>
+    </div>
+    <p class="cat-desc">Branded presentation template with pre-built slide layouts, fonts, and color palette applied.</p>
+
+    <div class="ppt-card">
+      <div class="ppt-thumb">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="6" width="32" height="24" rx="2" stroke="white" stroke-width="1.5"/><rect x="6" y="10" width="14" height="10" rx="1" stroke="white" stroke-width="1.2"/><path d="M6 24h24M6 27h16" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="ppt-info">
+        <div class="ppt-name">STORY3 Presentation Template</div>
+        <div class="ppt-meta">PPTX · Microsoft PowerPoint</div>
+        <a href="assets/ppt/STORY3-PPT-Template.pptx" download class="ppt-dl-btn">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v7M2 7.5l3.5 2.5 3.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Download Template
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       LINKEDIN
+  ─────────────────────────────────────────── -->
+  <section class="cat-section" id="linkedin">
+    <div class="cat-header">
+      <h2 class="cat-title">LinkedIn Assets</h2>
+      <span class="cat-count">4 files</span>
+    </div>
+    <p class="cat-desc">Hero banner images sized for LinkedIn profile and company pages (1584 × 396 px). Download and upload directly to your LinkedIn profile under Background photo.</p>
+
+    <div class="img-grid">
+      <div class="img-card">
+        <img src="assets/linkedin/Li-Hero-1.png" alt="LinkedIn Hero 1" class="img-thumb" loading="lazy">
+        <div class="img-card-footer">
+          <span class="img-card-name">LinkedIn Hero 1</span>
+          <a href="assets/linkedin/Li-Hero-1.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <img src="assets/linkedin/Li-Hero-2.png" alt="LinkedIn Hero 2" class="img-thumb" loading="lazy">
+        <div class="img-card-footer">
+          <span class="img-card-name">LinkedIn Hero 2</span>
+          <a href="assets/linkedin/Li-Hero-2.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <img src="assets/linkedin/Li-Hero-3.png" alt="LinkedIn Hero 3" class="img-thumb" loading="lazy">
+        <div class="img-card-footer">
+          <span class="img-card-name">LinkedIn Hero 3</span>
+          <a href="assets/linkedin/Li-Hero-3.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <div class="img-card">
+        <img src="assets/linkedin/Li-Hero-4.png" alt="LinkedIn Hero 4" class="img-thumb" loading="lazy">
+        <div class="img-card-footer">
+          <span class="img-card-name">LinkedIn Hero 4</span>
+          <a href="assets/linkedin/Li-Hero-4.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
