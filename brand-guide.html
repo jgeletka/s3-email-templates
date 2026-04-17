@@ -142,7 +142,8 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
 .apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media(max-width:700px){.apps-grid{grid-template-columns:1fr 1fr}}
 .app-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:6px;overflow:hidden}
-.app-card-img{background:#031527;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2)}
+.app-card-img{background:#031527;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.2);min-height:0}
+img.app-card-img{display:block;aspect-ratio:4/3;object-fit:cover;width:100%}
 .app-card-label{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35)}
 
 /* ── Copy toast ── */
@@ -552,30 +553,37 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
   <p class="apps-desc">Brand applications extend across both physical and digital touchpoints. The STORY3 identity is designed to carry authority across every format, from apparel to signage to branded swag items.</p>
   <div class="apps-grid">
     <div class="app-card">
-      <div class="app-card-img">Jacket · Embroidery</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Polo.png" alt="STORY3 branded polo" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Apparel</div>
     </div>
     <div class="app-card">
-      <div class="app-card-img">Baseball Cap · S3 Mark</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Hat.png" alt="STORY3 branded hat" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Headwear</div>
     </div>
     <div class="app-card">
-      <div class="app-card-img">Notebook · Wordmark</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Notebook.png" alt="STORY3 branded notebook" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Stationery</div>
     </div>
     <div class="app-card">
-      <div class="app-card-img">Wall Signage · Full Logo</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Subway-Display.png" alt="STORY3 subway display" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Signage</div>
     </div>
     <div class="app-card">
-      <div class="app-card-img">Branded Box · Wave Pattern</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Gift-Box.png" alt="STORY3 branded gift box" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Packaging</div>
     </div>
     <div class="app-card">
-      <div class="app-card-img">Business Card · Monogram</div>
+      <!-- eslint-disable-next-line -->
+      <img src="assets/applications/STORY3-Business-Card.png" alt="STORY3 business card" class="app-card-img" style="object-fit:cover;width:100%;height:100%;display:block">
       <div class="app-card-label">Print</div>
     </div>
   </div>
+  <!-- Raincoat available: assets/applications/STORY3-Raincoat.png -->
 </section>
 
 </div><!-- /bg-wrap -->
