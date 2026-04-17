@@ -72,6 +72,31 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
 .ppt-dl-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:3px;background:rgba(56,149,208,0.12);border:1px solid rgba(56,149,208,0.3);color:#3895D0;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.15s}
 .ppt-dl-btn:hover{background:rgba(56,149,208,0.22);border-color:rgba(56,149,208,0.55)}
 
+/* ── Tips / details block ── */
+.tips-block{background:rgba(56,149,208,0.05);border:1px solid rgba(56,149,208,0.18);border-radius:6px;overflow:hidden}
+.tips-summary{display:flex;align-items:center;gap:10px;padding:16px 20px;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.65);list-style:none;user-select:none;transition:color 0.15s}
+.tips-summary::-webkit-details-marker{display:none}
+.tips-summary:hover{color:rgba(255,255,255,0.85)}
+.tips-chevron{margin-left:auto;transition:transform 0.2s}
+details[open] .tips-chevron{transform:rotate(180deg)}
+.tips-body{padding:0 20px 24px;border-top:1px solid rgba(56,149,208,0.12)}
+.tips-intro{font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:13px;line-height:22px;color:rgba(255,255,255,0.5);margin:18px 0 20px}
+.tips-two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:700px){.tips-two-col{grid-template-columns:1fr}}
+.tips-col-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3895D0;margin-bottom:12px;display:block}
+.tips-steps{padding-left:18px;display:flex;flex-direction:column;gap:7px}
+.tips-steps li{font-size:12px;line-height:20px;color:rgba(255,255,255,0.55)}
+.tips-steps li strong{color:rgba(255,255,255,0.8)}
+.tips-bullets{padding-left:16px;display:flex;flex-direction:column;gap:7px}
+.tips-bullets li{font-size:12px;line-height:20px;color:rgba(255,255,255,0.55);list-style:disc}
+.tips-bullets li strong{color:rgba(255,255,255,0.8)}
+.tips-note{font-size:10px;color:rgba(255,255,255,0.3);margin-top:12px;font-style:italic}
+.tips-best{margin-top:24px;padding:14px 18px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:4px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.tips-best-label{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(56,149,208,0.7);flex-shrink:0}
+.tips-best-items{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:rgba(255,255,255,0.5)}
+.tips-best-items strong{color:rgba(255,255,255,0.75)}
+.tips-sep{color:rgba(255,255,255,0.2)}
+
 </style>
 </head>
 <body>
@@ -292,6 +317,61 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
       </div>
 
     </div>
+
+    <!-- PC image compression tip -->
+    <details class="tips-block" style="margin-top:28px">
+      <summary class="tips-summary">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0"><circle cx="7" cy="7" r="6" stroke="#3895D0" stroke-width="1.3"/><path d="M7 6v4M7 4.5v.5" stroke="#3895D0" stroke-width="1.4" stroke-linecap="round"/></svg>
+        PC Users — Prevent Word from compressing your logo
+        <svg class="tips-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5l3 3 3-3" stroke="rgba(255,255,255,0.35)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="tips-body">
+        <p class="tips-intro">PCs tend to auto-compress images. Use these settings to ensure your logo stays sharp.</p>
+
+        <div class="tips-two-col">
+          <div class="tips-col">
+            <p class="tips-col-label">Make it the default for all new documents</p>
+            <ol class="tips-steps">
+              <li>Go to <strong>File → Options → Advanced</strong></li>
+              <li>Scroll to <strong>Image Size and Quality</strong></li>
+              <li>In the dropdown, select <strong>"All New Documents"</strong></li>
+              <li>Check <strong>"Do not compress images in file"</strong></li>
+              <li>Set <strong>Default resolution = High fidelity</strong></li>
+              <li>Click <strong>OK</strong></li>
+            </ol>
+            <p class="tips-note">This applies to anything created from now on.</p>
+          </div>
+
+          <div class="tips-col">
+            <p class="tips-col-label">Make it permanent — update Normal.dotm</p>
+            <ol class="tips-steps">
+              <li>Open a blank Word doc</li>
+              <li>Apply the settings above (with "All New Documents" selected)</li>
+              <li>Close Word</li>
+              <li>When prompted, <strong>save changes to Normal template</strong></li>
+            </ol>
+            <p class="tips-note">Every new doc inherits this behavior automatically.</p>
+
+            <p class="tips-col-label" style="margin-top:20px">Important limitations</p>
+            <ul class="tips-bullets">
+              <li>These settings do <strong>not</strong> retroactively fix existing documents</li>
+              <li>Each existing file may still have compression baked in — adjust individually as needed</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tips-best">
+          <span class="tips-best-label">Best practice combo</span>
+          <div class="tips-best-items">
+            <span>Set this default</span>
+            <span class="tips-sep">·</span>
+            <span>Use <strong>Insert → Pictures</strong> (not paste)</span>
+            <span class="tips-sep">·</span>
+            <span>Use <strong>SVG logos</strong> when possible</span>
+          </div>
+        </div>
+      </div>
+    </details>
   </section>
 
   <!-- ──────────────────────────────────────────
@@ -324,10 +404,10 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
   ─────────────────────────────────────────── -->
   <section class="cat-section" id="linkedin">
     <div class="cat-header">
-      <h2 class="cat-title">LinkedIn Assets</h2>
-      <span class="cat-count">4 files</span>
+      <h2 class="cat-title">LinkedIn / Social Assets</h2>
+      <span class="cat-count">5 files</span>
     </div>
-    <p class="cat-desc">Hero banner images sized for LinkedIn profile and company pages (1584 × 396 px). Download and upload directly to your LinkedIn profile under Background photo.</p>
+    <p class="cat-desc">Hero banner images sized for LinkedIn profile and company pages (1584 × 396 px). Download and upload directly to your LinkedIn profile under Background photo. A branded profile avatar is also included.</p>
 
     <div class="img-grid">
       <div class="img-card">
@@ -368,6 +448,18 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
         <div class="img-card-footer">
           <span class="img-card-name">LinkedIn Hero 4</span>
           <a href="assets/linkedin/Li-Hero-4.png" download class="img-dl-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Download
+          </a>
+        </div>
+      </div>
+
+      <!-- Avatar -->
+      <div class="img-card">
+        <img src="assets/linkedin/Li-Avatar.png" alt="LinkedIn Avatar" class="img-thumb" loading="lazy" style="aspect-ratio:1/1;object-fit:cover">
+        <div class="img-card-footer">
+          <span class="img-card-name">Profile Avatar</span>
+          <a href="assets/linkedin/Li-Avatar.png" download class="img-dl-btn">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v6M2 7l3 2 3-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
             Download
           </a>
