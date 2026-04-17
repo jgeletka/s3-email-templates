@@ -300,22 +300,58 @@ function copyHtml() {
 
 function downloadPng() {
   var el = document.getElementById('sig-preview-sig');
-  if (!window.html2canvas) {
-    var s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
-    s.onload = function() { runPng(el); };
-    document.head.appendChild(s);
-  } else { runPng(el); }
+  var img = el.querySelector('img');
+  var btn = document.querySelector('button[onclick="downloadPng()"]');
+  if (btn) { btn.textContent = '↓ Preparing…'; btn.disabled = true; }
+
+  function restore() {
+    if (btn) { btn.textContent = '↓ Download PNG'; btn.disabled = false; }
+  }
+
+  function doRender() {
+    if (!window.html2canvas) {
+      var s = document.createElement('script');
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      s.onload = function() { runPng(el, restore); };
+      s.onerror = restore;
+      document.head.appendChild(s);
+    } else {
+      runPng(el, restore);
+    }
+  }
+
+  // Convert logo img to data URL first to avoid canvas CORS taint
+  if (img && img.src && !img.src.startsWith('data:')) {
+    var origSrc = img.src;
+    fetch(img.src)
+      .then(function(r) { return r.blob(); })
+      .then(function(blob) {
+        var reader = new FileReader();
+        reader.onload = function() {
+          img.onload = function() { doRender(); setTimeout(function() { img.src = origSrc; }, 1000); };
+          img.src = reader.result;
+        };
+        reader.readAsDataURL(blob);
+      })
+      .catch(function() { doRender(); });
+  } else {
+    doRender();
+  }
 }
 
-function runPng(el) {
-  html2canvas(el, { scale:2, backgroundColor:'#ffffff', useCORS:true, logging:false }).then(function(canvas) {
-    var a = document.createElement('a');
-    var name = document.getElementById('sig-name').value || 'signature';
-    a.download = 'story3-sig-' + name.replace(/\s+/g,'-').toLowerCase() + '.png';
-    a.href = canvas.toDataURL('image/png');
-    a.click();
-  });
+function runPng(el, onDone) {
+  html2canvas(el, { scale:2, backgroundColor:'#ffffff', useCORS:false, allowTaint:false, logging:false })
+    .then(function(canvas) {
+      var a = document.createElement('a');
+      var name = document.getElementById('sig-name').value || 'signature';
+      a.download = 'story3-sig-' + name.replace(/\s+/g,'-').toLowerCase() + '.png';
+      a.href = canvas.toDataURL('image/png');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      if (onDone) onDone();
+    })
+    .catch(function() { if (onDone) onDone(); });
 }
 
 updateSig();
