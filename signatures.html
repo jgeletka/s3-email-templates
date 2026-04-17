@@ -360,7 +360,11 @@ function downloadPng() {
       .then(function(blob) {
         var reader = new FileReader();
         reader.onload = function() {
-          img.onload = function() { doRender(); setTimeout(function() { img.src = origSrc; }, 1000); };
+          img.onload = function() {
+            img.onload = null; // prevent re-firing when src is restored
+            doRender();
+            img.src = origSrc; // restore immediately after render starts
+          };
           img.src = reader.result;
         };
         reader.readAsDataURL(blob);
