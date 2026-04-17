@@ -12,11 +12,11 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
 
 /* ── Top nav ── */
 .topnav{position:fixed;top:0;left:0;right:0;height:52px;background:#020609;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:200;box-sizing:border-box}
-.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em;text-decoration:none}
+.topnav-brand{font-family:'Newsreader',Georgia,serif;font-size:15px;color:#fff;font-weight:400;letter-spacing:0.01em;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .topnav-brand span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
 .topnav-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.05);border-radius:4px;padding:3px}
 .tnav-tab{background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Figtree',Helvetica,sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 18px;border-radius:3px;cursor:pointer;transition:all 0.15s;text-decoration:none;display:inline-flex;align-items:center}
-.tnav-tab:hover{color:rgba(255,255,255,0.7)}
+.tnav-tab:hover{background:rgba(255,255,255,0.9);color:#04101d}
 .tnav-tab.active{background:#04101d;color:#fff;box-shadow:0 1px 4px rgba(2,8,18,0.6)}
 
 /* ── Main content area ── */
@@ -97,6 +97,7 @@ details[open] .tips-chevron{transform:rotate(180deg)}
 .tips-best-items strong{color:rgba(255,255,255,0.75)}
 .tips-sep{color:rgba(255,255,255,0.2)}
 
+@media(max-width:640px){.topnav-brand span{display:none}.topnav-brand{font-size:13px;max-width:80px}}
 </style>
 </head>
 <body>
