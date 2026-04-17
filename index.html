@@ -153,9 +153,39 @@ body.preview-mobile a.e-outline-btn,
 body.preview-mobile a.e-t04-cta,
 body.preview-mobile a.e-btn-pair { display:block!important; width:100%!important; box-sizing:border-box!important; margin-right:0!important; margin-bottom:12px!important; text-align:center!important; }
 @media(max-width:640px){.topnav-brand span{display:none}.topnav-brand{font-size:13px;max-width:80px}}
+
+/* ── Password gate ── */
+#pw-gate{position:fixed;inset:0;background:#020609;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+#pw-gate.hidden{display:none}
+.pw-logo{font-family:'Newsreader',Georgia,serif;font-size:22px;color:#fff;font-weight:400;letter-spacing:0.04em;margin-bottom:6px}
+.pw-logo span{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.22);text-transform:uppercase;margin-left:8px;vertical-align:middle}
+.pw-sub{font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:40px}
+.pw-box{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:36px 40px;display:flex;flex-direction:column;align-items:center;gap:16px;width:320px}
+.pw-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);align-self:flex-start}
+.pw-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:5px;padding:11px 14px;font-size:14px;color:#fff;font-family:'Figtree',Helvetica,sans-serif;outline:none;box-sizing:border-box;transition:border-color 0.15s;letter-spacing:0.05em}
+.pw-input:focus{border-color:rgba(56,149,208,0.5)}
+.pw-input.error{border-color:rgba(220,60,60,0.6);animation:pw-shake 0.3s ease}
+@keyframes pw-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pw-btn{width:100%;padding:12px;background:#3895D0;border:none;border-radius:5px;color:#fff;font-family:'Figtree',Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background 0.15s}
+.pw-btn:hover{background:#2a7ab8}
+.pw-err{font-size:10px;color:rgba(220,80,80,0.8);letter-spacing:0.5px;min-height:14px}
+
 </style>
 </head>
 <body>
+
+<!-- ── Password gate ── -->
+<div id="pw-gate">
+  <p class="pw-logo">STORY3 <span>Capital Partners</span></p>
+  <p class="pw-sub">Brand Tools</p>
+  <div class="pw-box">
+    <span class="pw-label">Password</span>
+    <input class="pw-input" id="pw-input" type="password" placeholder="Enter password" onkeydown="if(event.key==='Enter')pwCheck()">
+    <button class="pw-btn" onclick="pwCheck()">Enter</button>
+    <span class="pw-err" id="pw-err"></span>
+  </div>
+</div>
+
 
 <!-- ═══ TOP NAV ═══ -->
 <nav class="topnav">
@@ -166,6 +196,7 @@ body.preview-mobile a.e-btn-pair { display:block!important; width:100%!important
     <a href="assets.html"      class="tnav-tab">Assets</a>
     <a href="brand-guide.html" class="tnav-tab">Brand Guide</a>
   </div>
+  <span style="font-size:8px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.18);text-transform:uppercase;margin-left:12px;white-space:nowrap">v1.2</span>
 </nav>
 
 <!-- ═══ SIDEBAR ═══ -->
@@ -636,6 +667,27 @@ slinks.forEach(function(a) {
 // Set initial active on load
 setActiveLink('t01');
 
+</script>
+<script>
+// ── Password gate ──
+(function(){
+  if(sessionStorage.getItem('s3auth')==='ok'){
+    document.getElementById('pw-gate').classList.add('hidden');
+  }
+})();
+function pwCheck(){
+  var v=document.getElementById('pw-input').value;
+  if(v==='story3cp'){
+    sessionStorage.setItem('s3auth','ok');
+    document.getElementById('pw-gate').classList.add('hidden');
+  } else {
+    var inp=document.getElementById('pw-input');
+    document.getElementById('pw-err').textContent='Incorrect password';
+    inp.classList.add('error');
+    inp.value='';
+    setTimeout(function(){inp.classList.remove('error');},400);
+  }
+}
 </script>
 </body>
 </html>
