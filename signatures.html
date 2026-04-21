@@ -172,8 +172,12 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
         <input class="sig-input" id="sig-title" type="text" placeholder="Your Title" oninput="updateSig()">
       </div>
       <div class="sig-field">
-        <label class="sig-label">Phone <span class="opt">optional</span></label>
+        <label class="sig-label">Direct <span class="opt">optional</span></label>
         <input class="sig-input" id="sig-phone" type="tel" placeholder="(310) 555-0100" oninput="updateSig()">
+      </div>
+      <div class="sig-field">
+        <label class="sig-label">Mobile <span class="opt">optional</span></label>
+        <input class="sig-input" id="sig-mobile" type="tel" placeholder="(310) 555-0101" oninput="updateSig()">
       </div>
       <div class="sig-field">
         <label class="sig-label">Email</label>
@@ -254,9 +258,9 @@ html,body{background:#060a0f;font-family:'Figtree',Helvetica,Arial,sans-serif;co
 <script>
 var sigLogo = 1;
 var LOGOS = {
-  1: { file: 'sig-wordmark.png',  width: 279, previewWidth: 186 },
-  2: { file: 'sig-monogram.png',  width: 98,  previewWidth: 72  },
-  3: { file: 'sig-engraved.png',  width: 284, previewWidth: 186 }
+  1: { file: 'sig-wordmark.png',  width: 237, previewWidth: 158 },
+  2: { file: 'sig-monogram.png',  width: 83,  previewWidth: 61  },
+  3: { file: 'sig-engraved.png',  width: 241, previewWidth: 158 }
 };
 var BASE = 'https://story3capital.com/images/signatures/';
 
@@ -264,18 +268,20 @@ function esc(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function buildSigHtml(name, title, phone, email, logo) {
+function buildSigHtml(name, title, phone, mobile, email, logo) {
   var l = LOGOS[logo];
   var imgUrl = BASE + l.file;
-  var phoneRow = phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4;">' + esc(phone) + '</td></tr>' : '';
-  return '<table cellpadding="0" cellspacing="0" border="0" style="font-family:Georgia,\'Times New Roman\',serif;">\n  <tr>\n    <td style="padding-right:22px;vertical-align:middle;">\n      <img src="' + imgUrl + '" width="' + l.width + '" alt="STORY3 Capital Partners" style="display:block;border:0;" />\n    </td>\n    <td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle;">\n      <table cellpadding="0" cellspacing="0" border="0">\n        <tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:24px;color:#04101d;padding-bottom:2px;line-height:28px;">' + esc(name) + '</td></tr>\n        <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;">' + esc(title) + '</td></tr>\n        ' + phoneRow + '\n        <tr><td><a href="mailto:' + esc(email) + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4;">' + esc(email) + '</a></td></tr>\n      </table>\n    </td>\n  </tr>\n</table>';
+  var phoneRow  = phone  ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4;">D: ' + esc(phone)  + '</td></tr>' : '';
+  var mobileRow = mobile ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4;">M: ' + esc(mobile) + '</td></tr>' : '';
+  return '<table cellpadding="0" cellspacing="0" border="0" style="font-family:Georgia,\'Times New Roman\',serif;">\n  <tr>\n    <td style="padding-right:22px;vertical-align:middle;">\n      <a href="https://story3capital.com/" style="display:block;border:0;text-decoration:none;" target="_blank">\n        <img src="' + imgUrl + '" width="' + l.width + '" alt="STORY3 Capital Partners" style="display:block;border:0;" />\n      </a>\n    </td>\n    <td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle;">\n      <table cellpadding="0" cellspacing="0" border="0">\n        <tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:24px;color:#04101d;padding-bottom:2px;line-height:28px;">' + esc(name) + '</td></tr>\n        <tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;">' + esc(title) + '</td></tr>\n        ' + phoneRow + '\n        ' + mobileRow + '\n        <tr><td><a href="mailto:' + esc(email) + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4;">' + esc(email) + '</a></td></tr>\n      </table>\n    </td>\n  </tr>\n</table>';
 }
 
 function updateSig() {
-  var name  = document.getElementById('sig-name').value;
-  var title = document.getElementById('sig-title').value;
-  var phone = document.getElementById('sig-phone').value;
-  var email = document.getElementById('sig-email').value;
+  var name   = document.getElementById('sig-name').value;
+  var title  = document.getElementById('sig-title').value;
+  var phone  = document.getElementById('sig-phone').value;
+  var mobile = document.getElementById('sig-mobile').value;
+  var email  = document.getElementById('sig-email').value;
   var l = LOGOS[sigLogo];
 
   document.getElementById('sig-avatar').textContent = (name || 'A').charAt(0).toUpperCase();
@@ -285,21 +291,25 @@ function updateSig() {
     '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse">' +
     '<tr>' +
     '<td style="padding-right:22px;vertical-align:middle">' +
+    '<a href="https://story3capital.com/" style="display:block;border:0;text-decoration:none" target="_blank">' +
     '<img src="assets/signatures/' + l.file + '" alt="STORY3" style="display:block;border:0;width:' + l.previewWidth + 'px;height:auto">' +
+    '</a>' +
     '</td>' +
     '<td style="border-left:1px solid #b8c8d8;padding-left:22px;vertical-align:middle">' +
     '<table cellpadding="0" cellspacing="0">' +
     '<tr><td style="font-family:Georgia,\'Times New Roman\',serif;font-size:22px;color:#04101d;padding-bottom:2px;line-height:26px;white-space:nowrap">' + (name || 'First &amp; Last Name') + '</td></tr>' +
     '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#04101d;padding-bottom:10px;line-height:1.4;white-space:nowrap">' + (title || 'Your Title') + '</td></tr>' +
-    (phone ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4">' + name_esc(phone) + '</td></tr>' : '') +
+    (phone  ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4">D: ' + name_esc(phone)  + '</td></tr>' : '') +
+    (mobile ? '<tr><td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#4a6275;padding-bottom:3px;line-height:1.4">M: ' + name_esc(mobile) + '</td></tr>' : '') +
     '<tr><td><a href="mailto:' + (email||'') + '" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#04101d;text-decoration:none;line-height:1.4">' + (email || 'you@story3capital.com') + '</a></td></tr>' +
     '</table></td></tr></table>';
 
   document.getElementById('sig-output').value = buildSigHtml(
-    name || 'First & Last Name',
-    title || 'Your Title',
+    name   || 'First & Last Name',
+    title  || 'Your Title',
     phone,
-    email || 'you@story3capital.com',
+    mobile,
+    email  || 'you@story3capital.com',
     sigLogo
   );
 }
